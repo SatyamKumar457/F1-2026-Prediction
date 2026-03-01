@@ -1,0 +1,12 @@
+# FastF1 cache
+f1_cache/
+*.sqlite
+*.pkl
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
