@@ -180,11 +180,12 @@ pip install -r requirements.txt
 ## 📌 Future Improvements
 
 Planned improvements:
-Add tyre strategy features
-Include weather conditions
-Improve feature engineering
-Add more seasons for training data
-Build a dashboard for race predictions
+
+- Add tyre strategy features
+- Include weather conditions
+- Improve feature engineering
+- Add more seasons for training data
+- Build a dashboard for race predictions
 
 ## 📜 License
 
