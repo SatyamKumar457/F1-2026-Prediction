@@ -35,7 +35,7 @@ This project builds a machine learning model that learns relationships between t
 ---
 
 ## 📂 Project Structure
-
+```
 F1-2026-Prediction
 |
 
@@ -55,9 +55,11 @@ F1-2026-Prediction
 │
 ├── Prototype.ipynb
 │
-└── README.md
+├── README.md
+│
+└── requirements.txt
 
-
+```
 ---
 
 ## 📥 Data Sources
