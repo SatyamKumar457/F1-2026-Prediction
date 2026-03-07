@@ -7,6 +7,23 @@ This project uses data from previous seasons (primarily 2024–2025) to train a 
 The goal is to explore how data science and machine learning can be applied to motorsport analytics.
 
 ---
+## 📢 Race Predictions Updates
+
+I will be posting the **predictions for every Formula 1 Grand Prix of the 2026 season on LinkedIn**.
+
+Each post will include:
+- 🏎️ Predicted race results
+- 📊 Model predictions vs actual race results
+- 📈 Accuracy analysis
+- 🔧 Improvements made to the model during the season
+
+Follow the updates here:
+
+🔗 LinkedIn: https://www.linkedin.com/in/satyam-kumar-a01959326/
+
+This project will evolve throughout the season as the model improves with more race data.
+
+---
 
 ## 📊 Project Overview
 
@@ -38,7 +55,7 @@ This project builds a machine learning model that learns relationships between t
 ```
 F1-2026-Prediction
 |
-
+│
 ├── .gitignore
 │ ├── # FastF1 cache
 │     ├──f1_cache/
