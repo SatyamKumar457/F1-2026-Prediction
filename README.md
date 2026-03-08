@@ -144,7 +144,7 @@ This large error occurred because **Formula 1 introduced major regulation change
 - Team competitiveness
 - Performance hierarchy
 
-Because of this, **historical race data (2023–2025)** became much less reliable for predicting **2026 performance.**
+Because of this, **historical race data (2023–2025)** became much less reliable for predicting **2026 performance**.
 ---
 ## 🔧 Updated Approach
 
@@ -157,7 +157,7 @@ Future model improvements will include:
 - Current-season team strength
 - Race weekend data
 
-The goal is to make the model **adaptive to regulation changes and evolving team performance.**
+The goal is to make the model **adaptive to regulation changes and evolving team performance**.
 ---
 
 ## 📊 Example Visualization
