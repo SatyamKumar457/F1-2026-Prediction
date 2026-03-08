@@ -27,15 +27,13 @@ This project will evolve throughout the season as the model improves with more r
 
 ## 📊 Project Overview
 
-Formula 1 race outcomes depend on multiple factors such as:
+The objective of this project is to explore:
 
-- Qualifying performance
-- Driver Historical result
-- Race pace
-- Team performance
-- Clean air performance
+- Whether **machine learning can predict Formula 1 race outcomes**
+- How **driver pace, team performance, and qualifying results** influence race performance
+- How **model performance changes when regulations or competitive order shift**
 
-This project builds a machine learning model that learns relationships between these factors and **predicts the race result or race time for each driver**.
+The project predicts race times for each driver, which are then used to determine the predicted race order and podium.
 
 ---
 
@@ -93,18 +91,15 @@ The project uses:
 
 ## 🧠 Features Used
 
-Key features used in the model include:
+The model currently uses the following features:
 
-- `QualifyingTime`
-- `CleanAirRacePace`
-- `TeamPerformance`
-- `Result of 2023,2024,2025`
+- Qualifying Time
+- Clean Air Race Pace
+- Team Performance Score
+- Previous race performance indicators
+- DNF / Non-participation indicators
 
-Additional engineered features may include:
-
-- Track performance indicators
-- Historical pace trends
-- Team performance index
+These features aim to represent both driver pace and team competitiveness.
 
 ---
 
@@ -131,18 +126,38 @@ Model performance is evaluated using:
 Predictions are compared against real race results to measure accuracy.
 
 Example comparison:
-
-Australia Grand Prix 2026 🇦🇺
+---
+## Australia Grand Prix 2026 🇦🇺
 
 | Driver | Predicted Position | Actual Position |
 |------|------|------|
-| RUS | 1 | TBD |
-| PIA | 2 | TBD |
-| NOR | 3 | TBD |
+| RUS | 1 | 1 |
+| PIA | 2 | DNF |
+| NOR | 3 | 5 |
 
 - **MAE (Based on 2025) :- 8.51(s)**
-- **MAE (Based on 2026) :- TBD(s)**
+- **MAE (Based on 2026) :- 1047(s)**
 
+This large error occurred because **Formula 1 introduced major regulation changes in 2026**, which drastically altered:
+
+- Car design
+- Team competitiveness
+- Performance hierarchy
+
+Because of this, **historical race data (2023–2025)** became much less reliable for predicting **2026 performance.**
+---
+## 🔧 Updated Approach
+
+To adapt to the new regulations, the project will now focus more on **current-season performance indicators** rather than relying heavily on historical race data.
+
+Future model improvements will include:
+
+- Practice session pace
+- Qualifying performance
+- Current-season team strength
+- Race weekend data
+
+The goal is to make the model **adaptive to regulation changes and evolving team performance.**
 ---
 
 ## 📊 Example Visualization
