@@ -54,6 +54,20 @@ The project predicts race times for each driver, which are then used to determin
 F1-2026-Prediction
 |
 │
+├── Data
+│ ├── f1_dataset_progress_2019.csv
+│ ├── f1_dataset_progress_2024.csv
+│ ├── f1_dataset_progress_2025.csv
+│ ├── f1_dataset_progress_2026.csv
+│
+├── Experiments
+│ ├── DataExtraction.ipynb
+│ ├── Prototype.ipynb
+│
+├── Race
+│ ├── AustraliaGP.ipynb
+│ ├── ChinaGp.ipynb
+│
 ├── .gitignore
 │ ├── # FastF1 cache
 │     ├──f1_cache/
@@ -65,10 +79,6 @@ F1-2026-Prediction
 │     ├──.venv/
 │ ├── # OS
 │     ├──.DS_Store
-│
-├── AustraliaGP.ipynb
-│
-├── Prototype.ipynb
 │
 ├── README.md
 │
