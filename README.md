@@ -99,6 +99,10 @@ The project uses:
 
 ---
 
+## 1. Australia Grand Prix 2026 🇦🇺
+
+---
+
 ## 🧠 Features Used
 
 The model currently uses the following features:
@@ -110,9 +114,6 @@ The model currently uses the following features:
 - DNF / Non-participation indicators
 
 These features aim to represent both driver pace and team competitiveness.
-
----
-## 1. Australia Grand Prix 2026 🇦🇺
 
 ---
 
@@ -159,6 +160,20 @@ Because of this, **historical race data (2023–2025)** became much less reliabl
 ---
 ## 2. China Grand Prix 2026 🇨🇳
 
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Stint
+- Tyre Data
+- Qualifying Time
+
+These features aim to represent both driver pace and team competitiveness.
 ---
 
 ## 🤖 Model
