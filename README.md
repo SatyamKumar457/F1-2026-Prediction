@@ -112,6 +112,9 @@ The model currently uses the following features:
 These features aim to represent both driver pace and team competitiveness.
 
 ---
+## 1. Australia Grand Prix 2026 🇦🇺
+
+---
 
 ## 🤖 Model
 
@@ -135,9 +138,7 @@ Model performance is evaluated using:
 
 Predictions are compared against real race results to measure accuracy.
 
-Example comparison:
 ---
-## Australia Grand Prix 2026 🇦🇺
 
 | Driver | Predicted Position | Actual Position |
 |------|------|------|
@@ -156,18 +157,54 @@ This large error occurred because **Formula 1 introduced major regulation change
 
 Because of this, **historical race data (2023–2025)** became much less reliable for predicting **2026 performance**.
 ---
-## 🔧 Updated Approach
+## 2. China Grand Prix 2026 🇨🇳
 
-To adapt to the new regulations, the project will now focus more on **current-season performance indicators** rather than relying heavily on historical race data.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+Final Standing
+
+
+Drivers are then ranked based on Final Standing to estimate finishing order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank**
+
+Predictions are compared against real race results to measure accuracy.
+
+---
+
+| Driver | Predicted Position | Actual Position |
+|------|------|------|
+| ANT | 1 | 1 |
+| RUS | 2 | 2 |
+| LEC | 3 | 4 |
+
+- **Spearman Rank (Based on Australia 2026) :- 0.80**
+- **MAE (Based on China 2026) :- 0.46**
+
+---
+## 🔧 Improvements
 
 Future model improvements will include:
 
-- Practice session pace
-- Qualifying performance
-- Current-season team strength
-- Race weekend data
+- Team Performance
+- Weather Factor
+- Current season team performance
+- More ... 
 
-The goal is to make the model **adaptive to regulation changes and evolving team performance**.
+The goal is simple:  **Imporve the Model after every race using new Data and Features**.
 ---
 
 ## 📊 Example Visualization
