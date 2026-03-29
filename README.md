@@ -65,8 +65,30 @@ F1-2026-Prediction
 │ ├── Prototype.ipynb
 │
 ├── Race
-│ ├── AustraliaGP.ipynb
-│ ├── ChinaGp.ipynb
+│ ├── 1.AustraliaGP
+│   ├──AustraliaGP.ipynb
+│   ├── Data
+│     ├── f1_dataset_progress_2019.csv
+│     ├── f1_dataset_progress_2024.csv
+│     ├── f1_dataset_progress_2025.csv
+│     ├── f1_dataset_progress_2026.csv
+│ ├── 2.ChinaGP
+│   ├──ChinaGP.ipynb
+│   ├── Data
+│     ├── f1_dataset_progress_2019.csv
+│     ├── f1_dataset_progress_2024.csv
+│     ├── f1_dataset_progress_2025.csv
+│     ├── f1_dataset_progress_2026.csv
+│ ├── 3.JapanGP
+│   ├──Data
+│     ├──AustraliaGP.csv
+│     ├──AustraliaGPModified.csv
+│     ├──Japan_result.csv
+│     ├──JapanGP.csv
+│     ├──JapanGPModified.csv
+│   ├──EDA&Feature.ipynb
+│   ├──ETL.ipynb
+│   ├──ModelTraining.ipynb
 │
 ├── .gitignore
 │ ├── # FastF1 cache
