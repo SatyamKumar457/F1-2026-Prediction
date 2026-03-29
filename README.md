@@ -178,7 +178,7 @@ This large error occurred because **Formula 1 introduced major regulation change
 - Team competitiveness
 - Performance hierarchy
 
-Because of this, **historical race data (2023–2025)** became much less reliable for predicting **2026 performance**.
+Because of this, *historical race data (2023–2025)* became much less reliable for predicting *2026 performance*.
 ---
 ## 2. China Grand Prix 2026 🇨🇳
 
