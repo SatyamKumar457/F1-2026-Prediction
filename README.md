@@ -178,7 +178,7 @@ This large error occurred because **Formula 1 introduced major regulation change
 - Team competitiveness
 - Performance hierarchy
 
-Because of this, *historical race data (2023–2025)* became much less reliable for predicting *2026 performance*.
+Because of this, historical race data (2023–2025) became much less reliable for predicting 2026 performance.
 ---
 ## 2. China Grand Prix 2026 🇨🇳
 
@@ -241,9 +241,86 @@ Future model improvements will include:
 - Current season team performance
 - More ... 
 
-The goal is simple:  **Imporve the Model after every race using new Data and Features**.
+The goal is simple: Imporve the Model after every race using new Data and Features.
+
 ---
 
+## 3. Japanese Grand Prix 2026 🇯🇵
+
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Stint
+- Tyre Data
+- Qualifying Time
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Predicted Position | Actual Position |
+|------|------|------|
+| ANT | 1 | 1 |
+| HAM | 2 | 6 |
+| NOR | 3 | 5 |
+
+- **Spearman Rank (Japan GP 2026): 0.70**
+- **Previous Race (China GP 2026): 0.461**
+
+**📊 Improvement: ~51.8% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Better ETL (Extract, Transform, Load) pipeline
+- Improved EDA (Exploratory Data Analysis)
+- Cleaner and more consistent input features
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- Team Performance Metrics
+- Weather Factors
+- Current Season Form
+- More race-specific features
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
 ## 📊 Example Visualization
 
 The project also includes visualizations comparing:
