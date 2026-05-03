@@ -122,7 +122,7 @@ The project uses:
 ---
 
 ## 1. Australia Grand Prix 2026 🇦🇺  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/1.AustraliaGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/01.AustraliaGP)
 ---
 
 ## 🧠 Features Used
@@ -181,7 +181,7 @@ This large error occurred because **Formula 1 introduced major regulation change
 Because of this, historical race data (2023–2025) became much less reliable for predicting 2026 performance.
 ---
 ## 2. China Grand Prix 2026 🇨🇳  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/2.ChinaGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/02.ChinaGP)
 ---
 
 ## 🧠 Features Used
@@ -246,7 +246,7 @@ The goal is simple: Imporve the Model after every race using new Data and Featur
 ---
 
 ## 3. Japanese Grand Prix 2026 🇯🇵  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/3.JapanGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/03.JapanGP)
 ---
 
 ## 🧠 Features Used
