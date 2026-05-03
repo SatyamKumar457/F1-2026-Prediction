@@ -1,7 +1,7 @@
 # FastF1 cache
 f1_cache/
 *.sqlite
-*.pkl
+
 
 # Python
 __pycache__/
