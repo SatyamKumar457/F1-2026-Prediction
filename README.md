@@ -348,10 +348,8 @@ Example plots include:
 The model currently uses the following features:
 
 - FP 1/2/3 Best Time
-- Sector 1/2/3 Time
 - Average Lap Time
-- Stint
-- Tyre Data
+- Starting Position
 - Qualifying Time
 
 These features aim to capture both driver pace and team performance under race conditions.
@@ -361,7 +359,7 @@ These features aim to capture both driver pace and team performance under race c
 
 The current model uses:
 
-**Random Forest Regressor**
+**Rigde Regressor**
 
 The model predicts:
 
@@ -383,8 +381,27 @@ This measures how well the predicted order matches the actual finishing order.
 | Driver | Predicted Position | Actual Position |
 |------|------|------|
 | ANT | 1 | 1 |
-| HAM | 2 | 6 |
-| NOR | 3 | 5 |
+| VER | 2 | 5 |
+| NOR | 3 | 2 |
+| LEC | 4 | 8 |
+| HAM | 5 | 6 |
+| PIA | 6 | 3 |
+| RUS | 7 | 4 |
+| LAW | 8 | 20 |
+| HAD | 9 | 22 |
+| SAI | 10 | 9 |
+| HUL | 11 | 19 |
+| BEA | 12 | 11 |
+| GAS | 13 | 21 |
+| COL | 14 | 7 |
+| OCO | 15 | 13 |
+| ALB | 16 | 15|
+| LIN | 17 | 14 |
+| PER | 18 | 16 |
+| STR | 19 | 17 |
+| ALO | 20 | 15 |
+| BOT | 21 | 18 |
+| BOR | 22 | 12 |
 
 - **Spearman Rank (Japan GP 2026): 0.70**
 - **Previous Race (China GP 2026): 0.461**
