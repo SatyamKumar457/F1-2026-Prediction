@@ -403,8 +403,8 @@ This measures how well the predicted order matches the actual finishing order.
 | BOT | 21 | 18 |
 | BOR | 22 | 12 |
 
-- **Spearman Rank (Japan GP 2026): 0.70**
-- **Previous Race (China GP 2026): 0.461**
+- **Spearman Rank (Miami GP 2026): 0.60**
+- **Previous Race (Japan GP 2026): 0.70**
 
 **📊 Improvement: ~51.8% increase in ranking correlation**
 
@@ -413,9 +413,9 @@ This measures how well the predicted order matches the actual finishing order.
 
 Key improvements in this iteration:
 
-- Better ETL (Extract, Transform, Load) pipeline
-- Improved EDA (Exploratory Data Analysis)
-- Cleaner and more consistent input features
+- Better EDA (Explorary Data Analysis)
+- Feature Correlations
+- Changed the Model
 
 These directly contributed to the performance jump.
 
@@ -424,10 +424,9 @@ These directly contributed to the performance jump.
 
 Future model improvements will include:
 
-- Team Performance Metrics
-- Weather Factors
-- Current Season Form
-- More race-specific features
+- More Features
+- More Data
+- More Hypertuning
 
 The goal is simple:
 Improve the model after every race using new data and better features.
@@ -439,12 +438,16 @@ The project also includes visualizations comparing:
 - Predicted vs Actual race results
 - Feature importance
 - Model performance
+- Correlations between Features
+- Correlation between Race Results
 
 Example plots include:
 
 - Feature importance graphs
 - Predicted vs Actual finishing order
-- Race pace distributions
+- Correlation Heatmap
+- Result Correlation Heatmap
+- Result Features
 
 ---
 
