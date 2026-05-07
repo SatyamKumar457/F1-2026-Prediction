@@ -78,27 +78,49 @@ F1-2026-Prediction
 │   ├──ChinaGP.ipynb
 |
 │ ├── 03.JapanGP
-│   ├──Data
-│     ├──AustraliaGP.csv
-│     ├──AustraliaGPModified.csv
-│     ├──Japan_result.csv
-│     ├──JapanGP.csv
-│     ├──JapanGPModified.csv
-│   ├──EDA&Feature.ipynb
-│   ├──ETL.ipynb
-│   ├──ModelTraining.ipynb
+│   ├── Data
+│     ├── AustraliaGP.csv
+│     ├── AustraliaGPModified.csv
+│     ├── Japan_result.csv
+│     ├── JapanGP.csv
+│     ├── JapanGPModified.csv
+│   ├── EDA&Feature.ipynb
+│   ├── ETL.ipynb
+│   ├── ModelTraining.ipynb
+|
+│ ├── 04.MiamiGP
+│   ├── Data
+│     ├── AustraliaGP.csv
+│     ├── ChinaGP.csv
+│     ├── JapanGP.csv
+│     ├── MiamiGP.csv
+│     ├── Predicted_Results.csv
+│     ├── Prediction_Data.csv
+│     ├── Training_Data.csv
+|   ├── Model
+|     ├── RandomForestModel1.pkl
+|   ├── Plots
+|     ├── Correlation_Heatmap.png
+|     ├── Feature_importance.png
+|     ├── Feature_RaceResult_Correlation.png
+|     ├── Result_Correlation_Heatmap.png
+|     ├── Result_Feature_RaceResult_Correlation.png
+│   ├── EDA.ipynb
+│   ├── ETL.ipynb
+|   ├── Evaluation.ipynb
+│   ├── ModelTraining.ipynb
 │
 ├── .gitignore
 │ ├── # FastF1 cache
-│     ├──f1_cache/
-│     ├──*.sqlite
-│     ├──*.pkl
+│     ├── f1_cache/
+│     ├── *.sqlite
+│     ├── *.pkl
 │ ├── # Python
-│     ├──__pycache__/
-│     ├──*.pyc
-│     ├──.venv/
+│     ├── __pycache__/
+│     ├── *.pyc
+│     ├── .venv/
 │ ├── # OS
-│     ├──.DS_Store
+│     ├── .DS_Store
 │
 ├── README.md
 │
@@ -357,7 +379,7 @@ These features aim to capture both driver pace and team performance under race c
 
 The current model uses:
 
-**Rigde Regressor**
+**Random Forest Regressor**
 
 The model predicts:
 
@@ -404,7 +426,7 @@ This measures how well the predicted order matches the actual finishing order.
 - **Spearman Rank (Miami GP 2026): 0.60**
 - **Previous Race (Japan GP 2026): 0.70**
 
-**📊 Improvement: ~51.8% increase in ranking correlation**
+**📊 Improvement: ~-14.29% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
@@ -413,7 +435,6 @@ Key improvements in this iteration:
 
 - Better EDA (Explorary Data Analysis)
 - Feature Correlations
-- Changed the Model
 
 These directly contributed to the performance jump.
 
