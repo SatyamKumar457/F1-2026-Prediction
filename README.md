@@ -46,6 +46,7 @@ The project predicts race times for each driver, which are then used to determin
 - XGBoost
 - FastF1
 - Matplotlib / Seaborn
+- Pickle
 
 ---
 
@@ -251,6 +252,8 @@ Example plots include:
 - Correlation Heatmap
 - Result Correlation Heatmap
 - Result Features
+
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/04.MiamiGP/Plots
 
 ---
 ---
