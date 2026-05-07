@@ -53,33 +53,31 @@ The project predicts race times for each driver, which are then used to determin
 ```
 F1-2026-Prediction
 |
-│
-├── Data
-│ ├── f1_dataset_progress_2019.csv
-│ ├── f1_dataset_progress_2024.csv
-│ ├── f1_dataset_progress_2025.csv
-│ ├── f1_dataset_progress_2026.csv
-│
 ├── Experiments
 │ ├── DataExtraction.ipynb
+| ├── DataExtractionV2.ipynb
 │ ├── Prototype.ipynb
 │
 ├── Race
-│ ├── 1.AustraliaGP
+│ ├── 01.AustraliaGP
+|   ├── Data
+│     ├── f1_dataset_progress_2019.csv
+│     ├── f1_dataset_progress_2024.csv
+│     ├── f1_dataset_progress_2025.csv
+│     ├── f1_dataset_progress_2026copy.csv
+|     ├── f1_dataset_progress_2026.csv 
 │   ├──AustraliaGP.ipynb
+│   
+│ ├── 02.ChinaGP
 │   ├── Data
 │     ├── f1_dataset_progress_2019.csv
 │     ├── f1_dataset_progress_2024.csv
 │     ├── f1_dataset_progress_2025.csv
 │     ├── f1_dataset_progress_2026.csv
-│ ├── 2.ChinaGP
+│     ├── f1_dataset_progress_2026(2).csv
 │   ├──ChinaGP.ipynb
-│   ├── Data
-│     ├── f1_dataset_progress_2019.csv
-│     ├── f1_dataset_progress_2024.csv
-│     ├── f1_dataset_progress_2025.csv
-│     ├── f1_dataset_progress_2026.csv
-│ ├── 3.JapanGP
+|
+│ ├── 03.JapanGP
 │   ├──Data
 │     ├──AustraliaGP.csv
 │     ├──AustraliaGPModified.csv
