@@ -141,226 +141,10 @@ The project uses:
 
 ---
 
-## 1. Australia Grand Prix 2026 🇦🇺  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/01.AustraliaGP)
----
-
-## 🧠 Features Used
-
-The model currently uses the following features:
-
-- Qualifying Time
-- Clean Air Race Pace
-- Team Performance Score
-- Previous race performance indicators
-- DNF / Non-participation indicators
-
-These features aim to represent both driver pace and team competitiveness.
-
----
-
-## 🤖 Model
-
-The current model uses:
-
-**XGBoost Regressor**
-
-The model predicts:
-PredictedRaceTime (seconds)
-
-
-Drivers are then ranked based on predicted race time to estimate finishing order.
-
----
-
-## 📈 Evaluation
-
-Model performance is evaluated using:
-
-- **MAE (Mean Absolute Error)**
-
-Predictions are compared against real race results to measure accuracy.
-
----
-
-| Driver | Predicted Position | Actual Position |
-|------|------|------|
-| RUS | 1 | 1 |
-| PIA | 2 | DNF |
-| NOR | 3 | 5 |
-
-- **MAE (Based on 2025) :- 8.51(s)**
-- **MAE (Based on 2026) :- 1047(s)**
-
-This large error occurred because **Formula 1 introduced major regulation changes in 2026**, which drastically altered:
-
-- Car design
-- Team competitiveness
-- Performance hierarchy
-
-Because of this, historical race data (2023–2025) became much less reliable for predicting 2026 performance.
----
-## 2. China Grand Prix 2026 🇨🇳  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/02.ChinaGP)
----
-
-## 🧠 Features Used
-
-The model currently uses the following features:
-
-- FP 1/2/3 Best Time
-- Sector 1/2/3 Time
-- Average Lap Time
-- Stint
-- Tyre Data
-- Qualifying Time
-
-These features aim to represent both driver pace and team competitiveness.
----
-
-## 🤖 Model
-
-The current model uses:
-
-**Random Forest Regressor**
-
-The model predicts:
-Final Standing
-
-
-Drivers are then ranked based on Final Standing to estimate finishing order.
-
----
-
-## 📈 Evaluation
-
-Model performance is evaluated using:
-
-- **Spearman Rank**
-
-Predictions are compared against real race results to measure accuracy.
-
----
-
-| Driver | Predicted Position | Actual Position |
-|------|------|------|
-| ANT | 1 | 1 |
-| RUS | 2 | 2 |
-| LEC | 3 | 4 |
-
-- **Spearman Rank (Based on Australia 2026) :- 0.80**
-- **MAE (Based on China 2026) :- 0.46**
-
----
-## 🔧 Improvements
-
-Future model improvements will include:
-
-- Team Performance
-- Weather Factor
-- Current season team performance
-- More ... 
-
-The goal is simple: Imporve the Model after every race using new Data and Features.
-
----
-
-## 3. Japanese Grand Prix 2026 🇯🇵  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/03.JapanGP)
----
-
-## 🧠 Features Used
-
-The model currently uses the following features:
-
-- FP 1/2/3 Best Time
-- Sector 1/2/3 Time
-- Average Lap Time
-- Stint
-- Tyre Data
-- Qualifying Time
-
-These features aim to capture both driver pace and team performance under race conditions.
----
-
-## 🤖 Model
-
-The current model uses:
-
-**Random Forest Regressor**
-
-The model predicts:
-
-➡️ Final Standing (continuous value)
-
-Drivers are then ranked based on predicted values to estimate the final race order.
-
----
-
-## 📈 Evaluation
-
-Model performance is evaluated using:
-
-- **Spearman Rank Correlation**
-
-This measures how well the predicted order matches the actual finishing order.
----
-
-| Driver | Predicted Position | Actual Position |
-|------|------|------|
-| ANT | 1 | 1 |
-| HAM | 2 | 6 |
-| NOR | 3 | 5 |
-
-- **Spearman Rank (Japan GP 2026): 0.70**
-- **Previous Race (China GP 2026): 0.461**
-
-**📊 Improvement: ~51.8% increase in ranking correlation**
-
----
-## 🔧 Improvements
-
-Key improvements in this iteration:
-
-- Better ETL (Extract, Transform, Load) pipeline
-- Improved EDA (Exploratory Data Analysis)
-- Cleaner and more consistent input features
-
-These directly contributed to the performance jump.
-
----
-## 🚀 Next Steps
-
-Future model improvements will include:
-
-- Team Performance Metrics
-- Weather Factors
-- Current Season Form
-- More race-specific features
-
-The goal is simple:
-Improve the model after every race using new data and better features.
----
-## 📊 Example Visualization
-
-The project also includes visualizations comparing:
-
-- Predicted vs Actual race results
-- Feature importance
-- Model performance
-
-Example plots include:
-
-- Feature importance graphs
-- Predicted vs Actual finishing order
-- Race pace distributions
-
----
-
 ---
 
 ## 4. Maimi Grand Prix 2026 🇯🇵  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/03.MiamiGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/04.MiamiGP)
 ---
 
 ## 🧠 Features Used
@@ -469,6 +253,229 @@ Example plots include:
 - Result Features
 
 ---
+---
+
+## 3. Japanese Grand Prix 2026 🇯🇵  
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/03.JapanGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Stint
+- Tyre Data
+- Qualifying Time
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Predicted Position | Actual Position |
+|------|------|------|
+| ANT | 1 | 1 |
+| HAM | 2 | 6 |
+| NOR | 3 | 5 |
+
+- **Spearman Rank (Japan GP 2026): 0.70**
+- **Previous Race (China GP 2026): 0.461**
+
+**📊 Improvement: ~51.8% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Better ETL (Extract, Transform, Load) pipeline
+- Improved EDA (Exploratory Data Analysis)
+- Cleaner and more consistent input features
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- Team Performance Metrics
+- Weather Factors
+- Current Season Form
+- More race-specific features
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
+## 📊 Example Visualization
+
+The project also includes visualizations comparing:
+
+- Predicted vs Actual race results
+- Feature importance
+- Model performance
+
+Example plots include:
+
+- Feature importance graphs
+- Predicted vs Actual finishing order
+- Race pace distributions
+
+---
+---
+## 2. China Grand Prix 2026 🇨🇳  
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/02.ChinaGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Stint
+- Tyre Data
+- Qualifying Time
+
+These features aim to represent both driver pace and team competitiveness.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+Final Standing
+
+
+Drivers are then ranked based on Final Standing to estimate finishing order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank**
+
+Predictions are compared against real race results to measure accuracy.
+
+---
+
+| Driver | Predicted Position | Actual Position |
+|------|------|------|
+| ANT | 1 | 1 |
+| RUS | 2 | 2 |
+| LEC | 3 | 4 |
+
+- **Spearman Rank (Based on Australia 2026) :- 0.80**
+- **MAE (Based on China 2026) :- 0.46**
+
+---
+## 🔧 Improvements
+
+Future model improvements will include:
+
+- Team Performance
+- Weather Factor
+- Current season team performance
+- More ... 
+
+The goal is simple: Imporve the Model after every race using new Data and Features.
+
+---
+---
+
+## 1. Australia Grand Prix 2026 🇦🇺  
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/01.AustraliaGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- Qualifying Time
+- Clean Air Race Pace
+- Team Performance Score
+- Previous race performance indicators
+- DNF / Non-participation indicators
+
+These features aim to represent both driver pace and team competitiveness.
+
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**XGBoost Regressor**
+
+The model predicts:
+PredictedRaceTime (seconds)
+
+
+Drivers are then ranked based on predicted race time to estimate finishing order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **MAE (Mean Absolute Error)**
+
+Predictions are compared against real race results to measure accuracy.
+
+---
+
+| Driver | Predicted Position | Actual Position |
+|------|------|------|
+| RUS | 1 | 1 |
+| PIA | 2 | DNF |
+| NOR | 3 | 5 |
+
+- **MAE (Based on 2025) :- 8.51(s)**
+- **MAE (Based on 2026) :- 1047(s)**
+
+This large error occurred because **Formula 1 introduced major regulation changes in 2026**, which drastically altered:
+
+- Car design
+- Team competitiveness
+- Performance hierarchy
+
+Because of this, historical race data (2023–2025) became much less reliable for predicting 2026 performance.
+---
+
+
+
+
 
 ## 🚀 How to Run
 
