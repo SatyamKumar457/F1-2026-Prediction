@@ -337,6 +337,100 @@ Example plots include:
 
 ---
 
+---
+
+## 4. Maimi Grand Prix 2026 🇯🇵  
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/03.MiamiGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Stint
+- Tyre Data
+- Qualifying Time
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Predicted Position | Actual Position |
+|------|------|------|
+| ANT | 1 | 1 |
+| HAM | 2 | 6 |
+| NOR | 3 | 5 |
+
+- **Spearman Rank (Japan GP 2026): 0.70**
+- **Previous Race (China GP 2026): 0.461**
+
+**📊 Improvement: ~51.8% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Better ETL (Extract, Transform, Load) pipeline
+- Improved EDA (Exploratory Data Analysis)
+- Cleaner and more consistent input features
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- Team Performance Metrics
+- Weather Factors
+- Current Season Form
+- More race-specific features
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
+## 📊 Example Visualization
+
+The project also includes visualizations comparing:
+
+- Predicted vs Actual race results
+- Feature importance
+- Model performance
+
+Example plots include:
+
+- Feature importance graphs
+- Predicted vs Actual finishing order
+- Race pace distributions
+
+---
+
 ## 🚀 How to Run
 
 Clone the repository:
