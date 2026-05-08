@@ -7,3 +7,4 @@ matplotlib
 os
 requests
 scipy
+pickle
