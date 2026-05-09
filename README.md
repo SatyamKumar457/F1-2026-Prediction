@@ -304,6 +304,24 @@ This measures how well the predicted order matches the actual finishing order.
 | ANT | 1 | 1 |
 | HAM | 2 | 6 |
 | NOR | 3 | 5 |
+| PIA | 4 | 2 |
+| RUS | 5 | 4 |
+| LEC | 6 | 3 |
+| COL | 7 | 16 |
+| HAD | 8 | 12 |
+| LAW | 9 | 9 |
+| BOR | 10 | 13 |
+| BEA | 11 | 22 |
+| BOT | 12 | 19 |
+| VER | 13 | 8 |
+| GAS | 14 | 7 |
+| SAI | 15 | 15 |
+| OCO | 16 | 10 |
+| HUL | 17 | 11 |
+| STR | 18 | 21 |
+| LIN | 19 | 14 |
+| PER | 20 | 17 |
+| ALB | 21 | 20 |
 
 - **Spearman Rank (Japan GP 2026): 0.70**
 - **Previous Race (China GP 2026): 0.461**
