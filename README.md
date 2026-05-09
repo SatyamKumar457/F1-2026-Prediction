@@ -415,6 +415,25 @@ Predictions are compared against real race results to measure accuracy.
 | ANT | 1 | 1 |
 | RUS | 2 | 2 |
 | LEC | 3 | 4 |
+| GAS | 4 | 6 |
+| HAD | 5 | 8 |
+| COL | 6 | 10 |
+| LAW | 7 | 7 |
+| ALB | 8 | 22 |
+| HAM | 9 | 3 |
+| PIA | 10 | 19 |
+| NOR | 11 | 20 |
+| VER | 12 | 16 |
+| HUL | 13 | 11 |
+| OCO | 14 | 14 |
+| LIN | 15 | 12 |
+| BOR | 16 | 21 |
+| ALO | 17 | 17 |
+| BOT | 18 | 13 |
+| STR | 19 | 18 |
+| PER | 20 | 15 |
+| BEA | 21 | 5 |
+| SAI | 22 | 9 |
 
 - **Spearman Rank (Based on Australia 2026) :- 0.80**
 - **MAE (Based on China 2026) :- 0.46**
