@@ -500,6 +500,25 @@ Predictions are compared against real race results to measure accuracy.
 | RUS | 1 | 1 |
 | PIA | 2 | DNF |
 | NOR | 3 | 5 |
+| ANT | 4 | 2 |
+| HAD | 5 | DNF |
+| LEC | 6 | 3 |
+| HAM | 7 | 4 |
+| VER | 8 | 6 |
+| LIN | 9 | 13 |
+| LAW | 10 | 9 |
+| BOR | 11 | 12 |
+| HUL | 12 | DNF |
+| BEA | 13 | 10 |
+| OCO | 14 | 8 |
+| GAS | 15 | 11 |
+| ALB | 16 | 7 |
+| COL | 17 | 14 |
+| ALO | 18 | DNF |
+| PER | 19 | 16 |
+| BOT | 20 | DNF |
+| STR | 21 | 17 |
+| SAI | 22 | 15 |
 
 - **MAE (Based on 2025) :- 8.51(s)**
 - **MAE (Based on 2026) :- 1047(s)**
