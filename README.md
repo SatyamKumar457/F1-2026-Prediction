@@ -522,6 +522,7 @@ Predictions are compared against real race results to measure accuracy.
 
 - **MAE (Based on 2025) :- 8.51(s)**
 - **MAE (Based on 2026) :- 1047(s)**
+- **Spearman Rank (Based on Australia 2026) :- 0.59**
 
 This large error occurred because **Formula 1 introduced major regulation changes in 2026**, which drastically altered:
 
