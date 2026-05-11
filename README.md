@@ -67,7 +67,8 @@ F1-2026-Prediction
 │     ├── f1_dataset_progress_2025.csv
 │     ├── f1_dataset_progress_2026copy.csv
 |     ├── f1_dataset_progress_2026.csv 
-│   ├──AustraliaGP.ipynb
+│   ├── AustraliaGP.ipynb
+│   ├── Evaluation.ipynb
 │   
 │ ├── 02.ChinaGP
 │   ├── Data
@@ -76,7 +77,7 @@ F1-2026-Prediction
 │     ├── f1_dataset_progress_2025.csv
 │     ├── f1_dataset_progress_2026.csv
 │     ├── f1_dataset_progress_2026(2).csv
-│   ├──ChinaGP.ipynb
+│   ├── ChinaGP.ipynb
 |
 │ ├── 03.JapanGP
 │   ├── Data
