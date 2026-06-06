@@ -100,8 +100,6 @@ for race in races:
     fp3_best = get_fp3_best(FP3)
     sector_time_best = get_sector_times(FP2)
     average_laptime = get_average_laptime(FP2)
-    stint = get_stint(FP2)
-    tyre = get_tyre_compound(FP2)
     qualifying_time = get_qualifying_data(Qualify)
     starting_position = get_starting_position(Qualify)
     result = get_race_results(Result)
@@ -113,8 +111,6 @@ for race in races:
     fp3_best.set_index("Driver",inplace=True)
     sector_time_best.set_index("Driver",inplace=True)
     average_laptime.set_index("Driver",inplace=True)
-    stint.set_index("Driver",inplace=True)
-    tyre.set_index("Driver",inplace=True)
     qualifying_time.set_index("Driver",inplace=True)
     starting_position.set_index("Driver",inplace=True)
     result.set_index("Driver",inplace=True)
@@ -127,8 +123,6 @@ for race in races:
     df[["FP3_BestTime(s)"]] = fp3_best[["LapTime"]]
     df[["Sector1Time(s)","Sector2Time(s)","Sector3Time(s)"]] = sector_time_best[["Sector1Time","Sector2Time","Sector3Time"]]
     df[["Average_Laptime(s)"]] = average_laptime[["LapTime"]]
-    df[["Longest_Stint"]] = stint[["LongestStint"]]
-    df[["Tyre_Compound"]] = tyre[["Compound"]]
     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
     df[["Starting_Pos"]] = starting_position[["Position"]]
     df[["Race_Result"]] = result[["Position"]]
@@ -140,8 +134,6 @@ for race in races:
     fp3_best.reset_index(inplace=True)
     sector_time_best.reset_index(inplace=True)
     average_laptime.reset_index(inplace=True)
-    stint.reset_index(inplace=True)
-    tyre.reset_index(inplace=True)
     qualifying_time.reset_index(inplace=True)
     starting_position.reset_index(inplace=True)
     result.reset_index(inplace=True)
@@ -180,8 +172,6 @@ for race in races:
     fp3_best = get_fp3_best(FP3)
     sector_time_best = get_sector_times(FP2)
     average_laptime = get_average_laptime(FP2)
-    stint = get_stint(FP2)
-    tyre = get_tyre_compound(FP2)
     qualifying_time = get_qualifying_data(Qualify)
     starting_position = get_starting_position(Qualify)
     result = get_race_results(Result)
@@ -193,8 +183,6 @@ for race in races:
     fp3_best.set_index("Driver",inplace=True)
     sector_time_best.set_index("Driver",inplace=True)
     average_laptime.set_index("Driver",inplace=True)
-    stint.set_index("Driver",inplace=True)
-    tyre.set_index("Driver",inplace=True)
     qualifying_time.set_index("Driver",inplace=True)
     starting_position.set_index("Driver",inplace=True)
     result.set_index("Driver",inplace=True)
@@ -207,8 +195,6 @@ for race in races:
     df[["FP3_BestTime(s)"]] = fp3_best[["LapTime"]]
     df[["Sector1Time(s)","Sector2Time(s)","Sector3Time(s)"]] = sector_time_best[["Sector1Time","Sector2Time","Sector3Time"]]
     df[["Average_Laptime(s)"]] = average_laptime[["LapTime"]]
-    df[["Longest_Stint"]] = stint[["LongestStint"]]
-    df[["Tyre_Compound"]] = tyre[["Compound"]]
     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
     df[["Starting_Pos"]] = starting_position[["Position"]]
     df[["Race_Result"]] = result[["Position"]]
@@ -220,8 +206,6 @@ for race in races:
     fp3_best.reset_index(inplace=True)
     sector_time_best.reset_index(inplace=True)
     average_laptime.reset_index(inplace=True)
-    stint.reset_index(inplace=True)
-    tyre.reset_index(inplace=True)
     qualifying_time.reset_index(inplace=True)
     starting_position.reset_index(inplace=True)
     result.reset_index(inplace=True)
