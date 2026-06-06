@@ -147,7 +147,7 @@ for race in races:
 
 # For Sprint Races
 
-races = ["China", "Miami"]
+races = ["China", "Miami", "Canada"]
 
 for race in races:
 
