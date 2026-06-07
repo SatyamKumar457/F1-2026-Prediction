@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import fastf1
+from fastf1.ergast import Ergast
 import requests
 
 def get_fp1_best(FP1):
@@ -136,6 +137,63 @@ def get_constructor_performance_recent(sessions_list):
     
     return constructor_summary.reset_index()
 
+def get_driver_points_before_race(season, race_name):
+    event = fastf1.get_event(season, race_name)
+    current_round = event.RoundNumber
+    
+    ergast = Ergast()
+    
+    if current_round == 1:
+        drivers = ergast.get_driver_info(season=season, round=1)
+        
+        driver_points = drivers[["driverCode"]].copy()
+        driver_points.rename(columns={"driverCode": "Driver"}, inplace=True)
+        driver_points["Points"] = 0.0
+        
+        return driver_points.sort_values(by="Driver").reset_index(drop=True)
+        
+    standings_response = ergast.get_driver_standings(season=season, round=current_round - 1)
+    
+    if hasattr(standings_response, 'content'):
+        standings = standings_response.content[0]
+    else:
+        standings = standings_response
+    
+    driver_points = standings[["driverCode", "points"]].copy()
+    driver_points.rename(columns={"driverCode": "Driver", "points": "Points"}, inplace=True)
+    
+    driver_points = driver_points.sort_values(by="Points", ascending=False).reset_index(drop=True)
+    
+    return driver_points
+
+def get_constructor_points_before_race(season, race_name):
+    event = fastf1.get_event(season, race_name)
+    current_round = event.RoundNumber
+    
+    ergast = Ergast()
+    
+    if current_round == 1:
+        constructors = ergast.get_constructor_info(season=season, round=1)
+        
+        constructor_points = constructors[["constructorId"]].copy()
+        constructor_points.rename(columns={"constructorId": "Constructor"}, inplace=True)
+        constructor_points["Points"] = 0.0
+        
+        return constructor_points.sort_values(by="Constructor").reset_index(drop=True)
+        
+    standings_response = ergast.get_constructor_standings(season=season, round=current_round - 1)
+    
+    if hasattr(standings_response, 'content'):
+        standings = standings_response.content[0]
+    else:
+        standings = standings_response
+    
+    constructor_points = standings[["constructorId", "points"]].copy()
+    constructor_points.rename(columns={"constructorId": "Constructor", "points": "Points"}, inplace=True)
+    
+    constructor_points = constructor_points.sort_values(by="Points", ascending=False).reset_index(drop=True)
+    
+    return constructor_points
 
 
 
@@ -176,7 +234,19 @@ Map = {
     "LIN":"Racing Bulls"  
 }
 
-
+Constructor_Map = {
+    "mercedes":"Mercedes",
+    "ferrari":"Ferrari",
+    "mclaren":"McLaren",
+    "red_bull":"Red Bull Racing",
+    "alpine":"Alpine",
+    "haas":"Haas F1 Team",
+    "rb":"Racing Bulls",
+    "williams":"Williams",
+    "audi":"Audi",
+    "cadillac":"Cadillac",
+    "aston_martin":"Aston Martin"
+}
 
 
 
@@ -212,6 +282,23 @@ for race in races:
     qualifying_time = get_qualifying_data(Qualify)
     starting_position = get_starting_position(Qualify)
     result = get_race_results(Result)
+    df_points = get_driver_points_before_race(season, race)
+    df_constructor_points = get_constructor_points_before_race(season, race)
+
+
+    df_points['Constructor'] = df_points['Driver'].map(Map)
+    df_constructor_points['NewConstructor'] = df_constructor_points['Constructor'].map(Constructor_Map)
+    df_constructor_points.drop(columns=['Constructor'],axis=1,inplace=True)
+    df_constructor_points.rename({'NewConstructor':'Constructor'},axis=1,inplace=True)
+    df_points = df_points.merge(
+        df_constructor_points[["Constructor","Points"]],
+        on = "Constructor",
+        how = "left"
+    )
+    df_points.rename({"Points_x":"DriversPoint","Points_y":"ConstructorsPoint"},axis=1,inplace=True)
+
+
+
     sessions_to_analyze = []
 
     if race == "Australia":
@@ -264,6 +351,7 @@ for race in races:
     starting_position.set_index("Driver",inplace=True)
     result.set_index("Driver",inplace=True)
     final_driver_form.set_index("Driver",inplace = True)
+    df_points.set_index("Driver",inplace=True)
     
 
     print("Setting Index Done.")
@@ -277,6 +365,7 @@ for race in races:
     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
     df[["Starting_Pos"]] = starting_position[["Position"]]
     df[["Race_Result"]] = result[["Position"]]
+    df[["DriverPoints","ConstructorPoints"]] = df_points[["DriversPoint","ConstructorsPoint"]]
 
     print("Data Transformation.")
 
@@ -289,6 +378,7 @@ for race in races:
     qualifying_time.reset_index(inplace=True)
     starting_position.reset_index(inplace=True)
     result.reset_index(inplace=True)
+    df_points.reset_index(inplace=True)
     df.reset_index(inplace=True)
 
     print("Resetting Index Done.")
@@ -327,14 +417,30 @@ for race in races:
     qualifying_time = get_qualifying_data(Qualify)
     starting_position = get_starting_position(Qualify)
     result = get_race_results(Result)
+    df_points = get_driver_points_before_race(season, race)
+    df_constructor_points = get_constructor_points_before_race(season, race)
+
+
+    df_points['Constructor'] = df_points['Driver'].map(Map)
+    df_constructor_points['NewConstructor'] = df_constructor_points['Constructor'].map(Constructor_Map)
+    df_constructor_points.drop(columns=['Constructor'],axis=1,inplace=True)
+    df_constructor_points.rename({'NewConstructor':'Constructor'},axis=1,inplace=True)
+    df_points = df_points.merge(
+        df_constructor_points[["Constructor","Points"]],
+        on = "Constructor",
+        how = "left"
+    )
+    df_points.rename({"Points_x":"DriversPoint","Points_y":"ConstructorsPoint"},axis=1,inplace=True)
+
+
+
     sessions_to_analyze = []
 
-    if race == "China":
-        n = 2
-    if race == "Miami":
-        n = 4
-    if race == "Canada":
-        n = 5
+    if race == "Australia":
+        n = 1
+
+    if race == "Japan":
+        n = 3
 
     start_round = max(1, n - 2)
 
@@ -367,7 +473,7 @@ for race in races:
     final_driver_form = driver_form[['Driver','Constructor','AveragePositionFromLast3Races','AveragePointsFromLast3Races','ConstructorAveragePointFromLast3Races']]
 
 
-
+    
 
     print("Data Extraction Done.")
 
@@ -380,6 +486,8 @@ for race in races:
     starting_position.set_index("Driver",inplace=True)
     result.set_index("Driver",inplace=True)
     final_driver_form.set_index("Driver",inplace = True)
+    df_points.set_index("Driver",inplace=True)
+    
 
     print("Setting Index Done.")
 
@@ -392,6 +500,7 @@ for race in races:
     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
     df[["Starting_Pos"]] = starting_position[["Position"]]
     df[["Race_Result"]] = result[["Position"]]
+    df[["DriverPoints","ConstructorPoints"]] = df_points[["DriversPoint","ConstructorsPoint"]]
 
     print("Data Transformation.")
 
@@ -404,6 +513,7 @@ for race in races:
     qualifying_time.reset_index(inplace=True)
     starting_position.reset_index(inplace=True)
     result.reset_index(inplace=True)
+    df_points.reset_index(inplace=True)
     df.reset_index(inplace=True)
 
     print("Resetting Index Done.")
