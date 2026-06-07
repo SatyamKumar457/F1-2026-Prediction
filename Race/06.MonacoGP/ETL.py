@@ -317,6 +317,19 @@ for race in races:
     driver_form = get_driver_performance_recent(sessions_to_analyze)
     constructor_form = get_constructor_performance_recent(sessions_to_analyze)
 
+    if constructor_form.empty:
+        constructor_form = pd.DataFrame({
+            "Constructor": list(set(Map.values())),
+            "ConstructorAveragePointFromLast3Races": 0
+        })
+
+    if driver_form.empty:
+        driver_form = pd.DataFrame({
+            "Driver": list(Map.keys()),
+            "AveragePositionFromLast3Races": 22,
+            "AveragePointsFromLast3Races": 0
+        })
+
    
     driver_form.iloc[:, 4:7] = driver_form.iloc[:, 4:7].fillna(0)
     driver_form.iloc[:,1:4] = driver_form.iloc[:,1:4].fillna(22)
@@ -436,11 +449,14 @@ for race in races:
 
     sessions_to_analyze = []
 
-    if race == "Australia":
-        n = 1
+    if race == "China":
+        n = 2
 
-    if race == "Japan":
-        n = 3
+    if race == "Miami":
+        n = 4
+
+    if race == "Canada":
+        n = 5
 
     start_round = max(1, n - 2)
 
