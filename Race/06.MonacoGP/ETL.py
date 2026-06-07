@@ -244,7 +244,7 @@ for race in races:
 
     start_round = max(1, n - 2)
 
-    for r in range(start_round, n + 1):
+    for r in range(start_round, n ):
         Result = fastf1.get_session(season, r, 'R')
         Result.load()
         sessions_to_analyze.append(Result)
@@ -373,7 +373,7 @@ for race in races:
 
     start_round = max(1, n - 2)
 
-    for r in range(start_round, n + 1):
+    for r in range(start_round, n ):
         Result = fastf1.get_session(season, r, 'R')
         Result.load()
         sessions_to_analyze.append(Result)
