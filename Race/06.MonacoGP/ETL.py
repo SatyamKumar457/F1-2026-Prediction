@@ -137,27 +137,7 @@ def get_constructor_performance_recent(sessions_list):
     return constructor_summary.reset_index()
 
 
-def get_driver_points(Result):
 
-    driver_points = Result.results[["Abbreviation", "Points"]].copy()
-    
-    driver_points.rename(columns={"Abbreviation": "Driver"}, inplace=True)
-    
-    driver_points = driver_points.sort_values(by="Points", ascending=False).reset_index(drop=True)
-    
-    return driver_points
-
-def get_constructor_points(Result):
-
-    results = Result.results.copy()
-    
-    constructor_points = results.groupby("TeamName")["Points"].sum().reset_index()
-    
-    constructor_points.rename(columns={"TeamName": "Constructor"}, inplace=True)
-    
-    constructor_points = constructor_points.sort_values(by="Points", ascending=False).reset_index(drop=True)
-    
-    return constructor_points
 
 
 
@@ -231,8 +211,6 @@ for race in races:
     average_laptime = get_average_laptime(FP2)
     qualifying_time = get_qualifying_data(Qualify)
     starting_position = get_starting_position(Qualify)
-    Driver_points = get_driver_points(Result)
-    Constructor_points = get_constructor_points(Result)
     result = get_race_results(Result)
     sessions_to_analyze = []
 
@@ -273,16 +251,7 @@ for race in races:
     final_driver_form = driver_form[['Driver','Constructor','AveragePositionFromLast3Races','AveragePointsFromLast3Races','ConstructorAveragePointFromLast3Races']]
 
 
-    Driver_points['Constructor'] = Driver_points['Driver'].map(Map)
-
-    Driver_points = Driver_points.merge(
-        Constructor_points[['Constructor','Points']],
-        on = 'Constructor',
-        how = 'left'
-    )
-    Driver_points.rename(columns={'Points_x':'DriverPoints','Points_y':'ConstructorPoints'},inplace=True)
     
-
 
     print("Data Extraction Done.")
 
@@ -295,7 +264,7 @@ for race in races:
     starting_position.set_index("Driver",inplace=True)
     result.set_index("Driver",inplace=True)
     final_driver_form.set_index("Driver",inplace = True)
-    Driver_points.set_index("Driver",inplace=True)
+    
 
     print("Setting Index Done.")
 
@@ -308,11 +277,9 @@ for race in races:
     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
     df[["Starting_Pos"]] = starting_position[["Position"]]
     df[["Race_Result"]] = result[["Position"]]
-    df[["DriverPoints","ConstructorPoints"]] = Driver_points[["DriverPoints","ConstructorPoints"]]
 
     print("Data Transformation.")
 
-    Driver_points.reset_index(inplace=True)
     final_driver_form.reset_index(inplace=True)
     fp1_best.reset_index(inplace=True)
     fp2_best.reset_index(inplace=True)
@@ -359,8 +326,6 @@ for race in races:
     average_laptime = get_average_laptime(FP2)
     qualifying_time = get_qualifying_data(Qualify)
     starting_position = get_starting_position(Qualify)
-    Driver_points = get_driver_points(Result)
-    Constructor_points = get_constructor_points(Result)
     result = get_race_results(Result)
     sessions_to_analyze = []
 
@@ -402,15 +367,6 @@ for race in races:
     final_driver_form = driver_form[['Driver','Constructor','AveragePositionFromLast3Races','AveragePointsFromLast3Races','ConstructorAveragePointFromLast3Races']]
 
 
-    Driver_points['Constructor'] = Driver_points['Driver'].map(Map)
-
-    Driver_points = Driver_points.merge(
-        Constructor_points[['Constructor','Points']],
-        on = 'Constructor',
-        how = 'left'
-    )
-    Driver_points.rename(columns={'Points_x':'DriverPoints','Points_y':'ConstructorPoints'},inplace=True)
-    
 
 
     print("Data Extraction Done.")
@@ -424,7 +380,6 @@ for race in races:
     starting_position.set_index("Driver",inplace=True)
     result.set_index("Driver",inplace=True)
     final_driver_form.set_index("Driver",inplace = True)
-    Driver_points.set_index("Driver",inplace=True)
 
     print("Setting Index Done.")
 
@@ -437,11 +392,9 @@ for race in races:
     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
     df[["Starting_Pos"]] = starting_position[["Position"]]
     df[["Race_Result"]] = result[["Position"]]
-    df[["DriverPoints","ConstructorPoints"]] = Driver_points[["DriverPoints","ConstructorPoints"]]
 
     print("Data Transformation.")
 
-    Driver_points.reset_index(inplace=True)
     final_driver_form.reset_index(inplace=True)
     fp1_best.reset_index(inplace=True)
     fp2_best.reset_index(inplace=True)
