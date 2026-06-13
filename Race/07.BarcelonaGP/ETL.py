@@ -400,7 +400,7 @@ for race in races:
     print("Resetting Index Done.")
 
 
-    df.to_csv(f"Race/06.MonacoGP/Data/{race}GP.csv",index=False)
+    df.to_csv(f"Race/07.BarcelonaGP/Data/{race}GP.csv",index=False)
 
 
 # For Sprint Races
@@ -538,7 +538,7 @@ for race in races:
     print("Resetting Index Done.")
 
 
-    df.to_csv(f"Race/06.MonacoGP/Data/{race}GP.csv",index=False)
+    df.to_csv(f"Race/07.BarcelonaGP/Data/{race}GP.csv",index=False)
 
 
 print("Done with ETL")
