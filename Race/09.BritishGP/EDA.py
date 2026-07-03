@@ -3,14 +3,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-AUS = pd.read_csv('Data/AustraliaGP.csv')
-CHI = pd.read_csv('Data/ChinaGP.csv')
-JAP = pd.read_csv('Data/JapanGP.csv')
-MIA  = pd.read_csv('Data/MiamiGP.csv')
-CAN = pd.read_csv('Data/CanadaGP.csv')
-MON = pd.read_csv('Data/MonacoGP.csv')
-BAR = pd.read_csv('Data/BarcelonaGP.csv')
-AUA = pd.read_csv('Data/AustriaGP.csv')
+AUS = pd.read_csv('Race/09.BritishGP/Data/AustraliaGP.csv')
+CHI = pd.read_csv('Race/09.BritishGP/Data/ChinaGP.csv')
+JAP = pd.read_csv('Race/09.BritishGP/Data/JapanGP.csv')
+MIA  = pd.read_csv('Race/09.BritishGP/Data/MiamiGP.csv')
+CAN = pd.read_csv('Race/09.BritishGP/Data/CanadaGP.csv')
+MON = pd.read_csv('Race/09.BritishGP/Data/MonacoGP.csv')
+BAR = pd.read_csv('Race/09.BritishGP/Data/BarcelonaGP.csv')
+AUA = pd.read_csv('Race/09.BritishGP/Data/AustriaGP.csv')
 
 TRA = pd.concat([AUS,CHI,JAP,MIA,CAN,MON,BAR,AUA],axis=0)
 
