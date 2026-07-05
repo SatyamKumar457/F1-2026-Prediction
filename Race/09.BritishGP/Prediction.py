@@ -1,8 +1,15 @@
 import pandas as pd
 import joblib
+from scipy.stats import spearmanr
+from sklearn.metrics import make_scorer
 
 
 PRE = pd.read_csv("Race/09.BritishGP/Data/PredictionData.csv")
+
+def spearman_correlation(y_true,y_pred):
+    return spearmanr(y_true,y_pred)[0]
+
+spearman_scorer = make_scorer(spearman_correlation, greater_is_better=True)
 
 model = joblib.load("Race/09.BritishGP/Model/Ridge0.63.pkl")
 
