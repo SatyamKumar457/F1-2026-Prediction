@@ -1,11 +1,10 @@
 import pandas as pd
 import joblib
-from sklearn.linear_model import Ridge
 
 
 PRE = pd.read_csv("Race/09.BritishGP/Data/PredictionData.csv")
 
-model = joblib.load("Race/09.BritishGP/Model/Rodge0.63.pkl")
+model = joblib.load("Race/09.BritishGP/Model/Ridge0.63.pkl")
 
 columns = [
        'AveragePointsFromLast3Races', 'ConstructorAveragePointFromLast3Races',

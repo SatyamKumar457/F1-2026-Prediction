@@ -63,7 +63,7 @@ corr, _ = spearmanr(y_pred, y_test)
 print("Spearman Rank:", corr)
 
 
-joblib.dump(model, f"Race/09.BritishGP/Model/Rodge{corr:.2f}.pkl")
+joblib.dump(regcv, f"Race/09.BritishGP/Model/Ridge{corr:.2f}.pkl")
 
 
 best_model = regcv.best_estimator_
