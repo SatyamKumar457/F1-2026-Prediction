@@ -1,5 +1,7 @@
 import pandas as pd
 import joblib
+from sklearn.linear_model import Ridge
+
 
 PRE = pd.read_csv("Race/09.BritishGP/Data/PredictionData.csv")
 
