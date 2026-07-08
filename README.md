@@ -145,6 +145,120 @@ The project uses:
 
 ---
 
+## 4. Canada Grand Prix 2026 🇨🇦  
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/05.CanadaGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- FP 1/2/3 Best Time
+- Average Lap Time
+- Starting Position
+- Qualifying Time
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Actual Position | Predicted Position |
+|------|------|------|
+| ANT | 1 | 2 |
+| HAM | 2 | 5 |
+| VER | 3 | 6 |
+| LEC | 4 | 8 |
+| HAD | 5 | 7 |
+| COL | 6 | DNF |
+| LAW | 7 | 10 |
+| GAS | 8 | 12 |
+| SAI | 9 | 14 |
+| BEA | 10 | 15 |
+| PIA | 11 | 4 |
+| HUL | 12 | 13 |
+| BOR | 13 | 11 |
+| COL | 14 | 21 |
+| STR | 15 | 18 |
+| BOT | 16 | 20 |
+| PER | 17 | 17 |
+| NOR | 18 | 3 |
+| RUS | 19 | 1 |
+| ALO | 20 | 16 |
+| ALB | 21 | 19 |
+| LIN | 22 | 9 |
+
+- **Spearman Rank (Canada GP 2026): 0.30**
+- **Previous Race (Miami GP 2026): 0.60**
+
+**📊 Improvement: ~ -50% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Built a better ETL pipeline.
+- Feature Correlations.
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- More Features
+- More Data
+- More Hypertuning
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
+## 📊 Example Visualization
+
+The project also includes visualizations comparing:
+
+- Predicted vs Actual race results
+- Feature importance
+- Model performance
+- Correlations between Features
+- Correlation between Race Results
+
+Example plots include:
+
+- Feature importance graphs
+- Predicted vs Actual finishing order
+- Correlation Heatmap
+- Result Correlation Heatmap
+- Result Features
+
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/05.CanadaGP/Plots
+
+---
+---
+
 ## 4. Maimi Grand Prix 2026 🇯🇵  
 (https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/04.MiamiGP)
 ---
