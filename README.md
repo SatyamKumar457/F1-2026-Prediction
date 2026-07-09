@@ -152,10 +152,26 @@ The project uses:
 
 The model currently uses the following features:
 
+- Average Position From Last 3 Races
+- Average Points From Last 3 Races
+- Constructor Average Point From Last 3 Races
 - FP 1/2/3 Best Time
+- Sector 1/2/3 Time
 - Average Lap Time
-- Starting Position
 - Qualifying Time
+- Starting Position
+- Driver's Point
+- Constructor's Point
+- FP 1/2/3 Rank
+- FP 1/2/3 Delta to Fastest
+- Sector 1/2/3 Rank
+- Combined Sector Time
+- Combined Sector Delta
+- Lap Time Rank
+- Delta to Fastest Lap
+- Start X Constructor Position
+- Driver X Constructor Point
+- FP3 X Starting Position
 
 These features aim to capture both driver pace and team performance under race conditions.
 ---
@@ -185,7 +201,7 @@ This measures how well the predicted order matches the actual finishing order.
 
 | Driver | Actual Position | Predicted Position |
 |------|------|------|
-| ANT | 1 | 2 |
+| ANT | 1 | 1 |
 | HAM | 2 | 5 |
 | VER | 3 | 6 |
 | LEC | 4 | 8 |
@@ -208,8 +224,8 @@ This measures how well the predicted order matches the actual finishing order.
 | ALB | 21 | 19 |
 | LIN | 22 | 9 |
 
-- **Spearman Rank (Canada GP 2026): 0.30**
-- **Previous Race (Miami GP 2026): 0.60**
+- **Spearman Rank (Monaco GP 2026): 0.35**
+- **Previous Race (Canada GP 2026): 0.30**
 
 **📊 Improvement: ~ -50% increase in ranking correlation**
 
