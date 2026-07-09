@@ -145,7 +145,7 @@ The project uses:
 
 ---
 
-## 4. Canada Grand Prix 2026 🇨🇦  
+## 5. Canada Grand Prix 2026 🇨🇦  
 (https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/05.CanadaGP)
 ---
 
