@@ -202,40 +202,40 @@ This measures how well the predicted order matches the actual finishing order.
 | Driver | Actual Position | Predicted Position |
 |------|------|------|
 | ANT | 1 | 1 |
-| HAM | 2 | 5 |
-| VER | 3 | 6 |
-| LEC | 4 | 8 |
-| HAD | 5 | 7 |
-| COL | 6 | DNF |
-| LAW | 7 | 10 |
-| GAS | 8 | 12 |
-| SAI | 9 | 14 |
-| BEA | 10 | 15 |
-| PIA | 11 | 4 |
-| HUL | 12 | 13 |
-| BOR | 13 | 11 |
-| COL | 14 | 21 |
-| STR | 15 | 18 |
-| BOT | 16 | 20 |
-| PER | 17 | 17 |
-| NOR | 18 | 3 |
-| RUS | 19 | 1 |
-| ALO | 20 | 16 |
-| ALB | 21 | 19 |
-| LIN | 22 | 9 |
+| HAM | 2 | 3 |
+| HAD | 3 | 8 |
+| PIA | 4 | 6 |
+| LAW | 5 | 10 |
+| LIN | 6 | 12 |
+| GAS | 7 | 9 |
+| ALB | 8 | 15 |
+| OCO | 9 | 14 |
+| ALO | 10 | 22 |
+| BOR | 11 | 18 |
+| RUS | 12 | 4 |
+| HUL | 13 | 16 |
+| COL | 14 | 13 |
+| PER | 15 | 19 |
+| SAI | 16 | 11 |
+| LEC | 17 | 2 |
+| STR | 18 | 21 |
+| NOR | 19 | 7 |
+| BEA | 20 | 17 |
+| BOT | 21 | 20 |
+| VER | 22 | 5 |
 
 - **Spearman Rank (Monaco GP 2026): 0.35**
 - **Previous Race (Canada GP 2026): 0.30**
 
-**📊 Improvement: ~ -50% increase in ranking correlation**
+**📊 Improvement: ~ -16.67% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
 
 Key improvements in this iteration:
 
-- Built a better ETL pipeline.
-- Feature Correlations.
+- Feature Engineering
+- Hyper Tuning Model
 
 These directly contributed to the performance jump.
 
@@ -244,9 +244,8 @@ These directly contributed to the performance jump.
 
 Future model improvements will include:
 
-- More Features
+- Trying Different Model
 - More Data
-- More Hypertuning
 
 The goal is simple:
 Improve the model after every race using new data and better features.
@@ -269,7 +268,7 @@ Example plots include:
 - Result Correlation Heatmap
 - Result Features
 
-See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/05.CanadaGP/Plots
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/06.MonacoGP/Plots
 
 ---
 
