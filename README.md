@@ -201,35 +201,35 @@ Model performance is evaluated using:
 This measures how well the predicted order matches the actual finishing order.
 ---
 
-| Driver | Actual Position | Predicted Position |
-|------|------|------|
-| ANT | 1 | 1 |
-| HAM | 2 | 3 |
-| HAD | 3 | 8 |
-| PIA | 4 | 6 |
-| LAW | 5 | 10 |
-| LIN | 6 | 12 |
-| GAS | 7 | 9 |
-| ALB | 8 | 15 |
-| OCO | 9 | 14 |
-| ALO | 10 | 22 |
-| BOR | 11 | 18 |
-| RUS | 12 | 4 |
-| HUL | 13 | 16 |
-| COL | 14 | 13 |
-| PER | 15 | 19 |
-| SAI | 16 | 11 |
-| LEC | 17 | 2 |
-| STR | 18 | 21 |
-| NOR | 19 | 7 |
-| BEA | 20 | 17 |
-| BOT | 21 | 20 |
-| VER | 22 | 5 |
+| Driver | Actual Position | Predicted Position | Position Difference |
+|------|------|------|------|
+| HAM | 1 | 3 | 2 |
+| RUS | 2 | 1 | -1 |
+| NOR | 3 | 2 | -1 |
+| VER | 4 | 6 | 2 |
+| PIA | 5 | 4 | -1 |
+| HAD | 6 | 8 | 2 |
+| GAS | 7 | 14 | 7 |
+| LAW | 8 | 10 | 2 |
+| LIN | 9 | 11 | 2 |
+| COL | 10 | 13 | 3 |
+| BOR | 11 | 12 | 1 |
+| SAI | 12 | 15 | 3 |
+| OCO | 13 | 17 | 4 |
+| PER | 14 | 19 | 5 |
+| LEC | 15 | 7 | -8 |
+| ANT | 16 | 5 | -11 |
+| BEA | 17 | 16 | -1 |
+| ALB | 18 | 18 | 0 |
+| ALO | 19 | 21 | 2 |
+| HUL | 20 | 9 | -11 |
+| BOT | 21 | 20 | -1 |
+| STR | 22 | 22 | 0 |
 
-- **Spearman Rank (Monaco GP 2026): 0.35**
-- **Previous Race (Canada GP 2026): 0.30**
+- **Spearman Rank (Barcelona GP 2026): 0.75**
+- **Previous Race (Monaco GP 2026): 0.35**
 
-**📊 Improvement: ~ -16.67% increase in ranking correlation**
+**📊 Improvement: ~ 85.71% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
@@ -238,6 +238,7 @@ Key improvements in this iteration:
 
 - Feature Engineering
 - Hyper Tuning Model
+- Trying Different Modles
 
 These directly contributed to the performance jump.
 
@@ -270,7 +271,7 @@ Example plots include:
 - Result Correlation Heatmap
 - Result Features
 
-See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/06.MonacoGP/Plots
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/07.BarcelonaGP/Plots
 
 ---
 
@@ -360,7 +361,7 @@ This measures how well the predicted order matches the actual finishing order.
 - **Spearman Rank (Monaco GP 2026): 0.35**
 - **Previous Race (Canada GP 2026): 0.30**
 
-**📊 Improvement: ~ -16.67% increase in ranking correlation**
+**📊 Improvement: ~ 16.67% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
