@@ -142,6 +142,138 @@ The project uses:
 - Driver and constructor information
 
 ---
+
+---
+
+## 6. Monaco Grand Prix 2026 🇲🇨  
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/06.MonacoGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- Average Position From Last 3 Races
+- Average Points From Last 3 Races
+- Constructor Average Point From Last 3 Races
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Qualifying Time
+- Starting Position
+- Driver's Point
+- Constructor's Point
+- FP 1/2/3 Rank
+- FP 1/2/3 Delta to Fastest
+- Sector 1/2/3 Rank
+- Combined Sector Time
+- Combined Sector Delta
+- Lap Time Rank
+- Delta to Fastest Lap
+- Start X Constructor Position
+- Driver X Constructor Point
+- FP3 X Starting Position
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Random Forest Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Actual Position | Predicted Position |
+|------|------|------|
+| ANT | 1 | 1 |
+| HAM | 2 | 3 |
+| HAD | 3 | 8 |
+| PIA | 4 | 6 |
+| LAW | 5 | 10 |
+| LIN | 6 | 12 |
+| GAS | 7 | 9 |
+| ALB | 8 | 15 |
+| OCO | 9 | 14 |
+| ALO | 10 | 22 |
+| BOR | 11 | 18 |
+| RUS | 12 | 4 |
+| HUL | 13 | 16 |
+| COL | 14 | 13 |
+| PER | 15 | 19 |
+| SAI | 16 | 11 |
+| LEC | 17 | 2 |
+| STR | 18 | 21 |
+| NOR | 19 | 7 |
+| BEA | 20 | 17 |
+| BOT | 21 | 20 |
+| VER | 22 | 5 |
+
+- **Spearman Rank (Monaco GP 2026): 0.35**
+- **Previous Race (Canada GP 2026): 0.30**
+
+**📊 Improvement: ~ -16.67% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Feature Engineering
+- Hyper Tuning Model
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- Trying Different Model
+- More Data
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
+## 📊 Example Visualization
+
+The project also includes visualizations comparing:
+
+- Predicted vs Actual race results
+- Feature importance
+- Model performance
+- Correlations between Features
+- Correlation between Race Results
+
+Example plots include:
+
+- Feature importance graphs
+- Predicted vs Actual finishing order
+- Correlation Heatmap
+- Result Correlation Heatmap
+- Result Features
+
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/06.MonacoGP/Plots
+
+---
+
+
 ---
 
 ## 6. Monaco Grand Prix 2026 🇲🇨  
