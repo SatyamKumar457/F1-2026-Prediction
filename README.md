@@ -145,8 +145,8 @@ The project uses:
 
 ---
 
-## 6. Monaco Grand Prix 2026 🇲🇨  
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/06.MonacoGP)
+## 7. Barcelona Grand Prix 2026 🇪🇸
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/07.BarcelonaGP)
 ---
 
 ## 🧠 Features Used
@@ -181,7 +181,8 @@ These features aim to capture both driver pace and team performance under race c
 
 The current model uses:
 
-**Random Forest Regressor**
+**1.Random Forest Regressor**
+**2.Ridge Regressor**
 
 The model predicts:
 
