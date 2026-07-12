@@ -201,28 +201,28 @@ This measures how well the predicted order matches the actual finishing order.
 
 | Driver | Actual Position | Predicted Position | Position Difference |
 |------|------|------|------|
-| RUS | 1 | 1 | 0 |
-| VER | 2 | 7 | 5 |
-| ANT | 3 | 5 | 2 |
-| PIA | 4 | 3 | -1 |
-| HAM | 5 | 2 | -3 |
-| HAD | 6 | 8 | 2 |
-| NOR | 7 | 4 | -3 |
-| LEC | 8 | 6 | -2 |
-| LAW | 9 | 10 | 1 |
-| LIN | 10 | 11 | 1 |
-| BOR | 11 | 12 | 1 |
-| HUL | 12 | 9 | -3 |
-| GAS | 13 | 14 | 1 |
-| BEA | 14 | 16 | 2 |
-| COL | 15 | 13 | -2 |
-| OCO | 16 | 17 | 1 |
-| ALB | 17 | 18 | 1 |
-| ALO | 18 | 21 | 3 |
-| STR | 19 | 22 | 3 |
-| SAI | 20 | 15 | -5 |
-| PER | 21 | 19 | -2 |
-| BOT | 22 | 20 | -2 |
+| LEC | 1 | 1 | 0 |
+| RUS | 2 | 10 | 8 |
+| HAM | 3 | 3 | 0 |
+| NOR | 4 | 4 | 0 |
+| HAD | 5 | 2 | -3 |
+| LAW | 6 | 7 | 1 |
+| LIN | 7 | 9 | 2 |
+| BOR | 8 | 11 | 3 |
+| COL | 9 | 17 | 8 |
+| GAS | 10 | 13 | 3 |
+| PIA | 11 | 8 | -3 |
+| BEA | 12 | 14 | 2 |
+| OCO | 13 | 18 | 5 |
+| PER | 14 | 20 | 6 |
+| ANT | 15 | 6 | -9 |
+| BOT | 16 | 19 | 3 |
+| SAI | 17 | 15 | -2 |
+| ALO | 18 | 22 | 4 |
+| STR | 19 | 21 | 2 |
+| VER | 20 | 5 | -15 |
+| ALB | 21 | 16 | -5 |
+| HUL | 22 | 12 | -10 |
 
 - **Spearman Rank (Austria GP 2026): 0.93**
 - **Previous Race (Barcelona GP 2026): 0.75**
