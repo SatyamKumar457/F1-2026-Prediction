@@ -146,7 +146,7 @@ The project uses:
 ---
 
 ## 8. Austria Grand Prix 2026 🇦🇹
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/07.BarcelonaGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/08.AustriaGP)
 ---
 
 ## 🧠 Features Used
@@ -181,8 +181,7 @@ These features aim to capture both driver pace and team performance under race c
 
 The current model uses:
 
-**1.Random Forest Regressor**
-**2.Ridge Regressor**
+**Ridge Regressor**
 
 The model predicts:
 
@@ -203,31 +202,31 @@ This measures how well the predicted order matches the actual finishing order.
 
 | Driver | Actual Position | Predicted Position | Position Difference |
 |------|------|------|------|
-| HAM | 1 | 3 | 2 |
-| RUS | 2 | 1 | -1 |
-| NOR | 3 | 2 | -1 |
-| VER | 4 | 6 | 2 |
-| PIA | 5 | 4 | -1 |
+| RUS | 1 | 1 | 0 |
+| VER | 2 | 7 | 5 |
+| ANT | 3 | 5 | 2 |
+| PIA | 4 | 3 | -1 |
+| HAM | 5 | 2 | -3 |
 | HAD | 6 | 8 | 2 |
-| GAS | 7 | 14 | 7 |
-| LAW | 8 | 10 | 2 |
-| LIN | 9 | 11 | 2 |
-| COL | 10 | 13 | 3 |
+| NOR | 7 | 4 | -3 |
+| LEC | 8 | 6 | -2 |
+| LAW | 9 | 10 | 1 |
+| LIN | 10 | 11 | 1 |
 | BOR | 11 | 12 | 1 |
-| SAI | 12 | 15 | 3 |
-| OCO | 13 | 17 | 4 |
-| PER | 14 | 19 | 5 |
-| LEC | 15 | 7 | -8 |
-| ANT | 16 | 5 | -11 |
-| BEA | 17 | 16 | -1 |
-| ALB | 18 | 18 | 0 |
-| ALO | 19 | 21 | 2 |
-| HUL | 20 | 9 | -11 |
-| BOT | 21 | 20 | -1 |
-| STR | 22 | 22 | 0 |
+| HUL | 12 | 9 | -3 |
+| GAS | 13 | 14 | 1 |
+| BEA | 14 | 16 | 2 |
+| COL | 15 | 13 | -2 |
+| OCO | 16 | 17 | 1 |
+| ALB | 17 | 18 | 1 |
+| ALO | 18 | 21 | 3 |
+| STR | 19 | 22 | 3 |
+| SAI | 20 | 15 | -5 |
+| PER | 21 | 19 | -2 |
+| BOT | 22 | 20 | -2 |
 
-- **Spearman Rank (Barcelona GP 2026): 0.75**
-- **Previous Race (Monaco GP 2026): 0.35**
+- **Spearman Rank (Austrian GP 2026): 0.93**
+- **Previous Race (Barcelona GP 2026): 0.75**
 
 **📊 Improvement: ~ 85.71% increase in ranking correlation**
 
