@@ -145,7 +145,7 @@ The project uses:
 ---
 
 ## 8. British Grand Prix 2026 🇬🇧
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/08.AustriaGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/09.BritishGP)
 ---
 
 ## 🧠 Features Used
