@@ -224,10 +224,10 @@ This measures how well the predicted order matches the actual finishing order.
 | ALB | 21 | 16 | -5 |
 | HUL | 22 | 12 | -10 |
 
-- **Spearman Rank (Austria GP 2026): 0.93**
-- **Previous Race (Barcelona GP 2026): 0.75**
+- **Spearman Rank (British GP 2026): 0.61**
+- **Previous Race (Austria GP 2026): 0.93**
 
-**📊 Improvement: ~ 24% increase in ranking correlation**
+**📊 Improvement: ~ -34.41% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
@@ -271,7 +271,7 @@ Example plots include:
 - Result Correlation Heatmap
 - Result Features
 
-See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/08.AusriaGP/Plots
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/09.BritishGP/Plots
 
 ---
 
