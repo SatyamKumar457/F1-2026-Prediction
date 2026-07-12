@@ -142,6 +142,138 @@ The project uses:
 - Driver and constructor information
 
 ---
+---
+
+## 8. British Grand Prix 2026 🇬🇧
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/08.AustriaGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- Average Position From Last 3 Races
+- Average Points From Last 3 Races
+- Constructor Average Point From Last 3 Races
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Qualifying Time
+- Starting Position
+- Driver's Point
+- Constructor's Point
+- FP 1/2/3 Rank
+- FP 1/2/3 Delta to Fastest
+- Sector 1/2/3 Rank
+- Combined Sector Time
+- Combined Sector Delta
+- Lap Time Rank
+- Delta to Fastest Lap
+- Start X Constructor Position
+- Driver X Constructor Point
+- FP3 X Starting Position
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Ridge Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Actual Position | Predicted Position | Position Difference |
+|------|------|------|------|
+| RUS | 1 | 1 | 0 |
+| VER | 2 | 7 | 5 |
+| ANT | 3 | 5 | 2 |
+| PIA | 4 | 3 | -1 |
+| HAM | 5 | 2 | -3 |
+| HAD | 6 | 8 | 2 |
+| NOR | 7 | 4 | -3 |
+| LEC | 8 | 6 | -2 |
+| LAW | 9 | 10 | 1 |
+| LIN | 10 | 11 | 1 |
+| BOR | 11 | 12 | 1 |
+| HUL | 12 | 9 | -3 |
+| GAS | 13 | 14 | 1 |
+| BEA | 14 | 16 | 2 |
+| COL | 15 | 13 | -2 |
+| OCO | 16 | 17 | 1 |
+| ALB | 17 | 18 | 1 |
+| ALO | 18 | 21 | 3 |
+| STR | 19 | 22 | 3 |
+| SAI | 20 | 15 | -5 |
+| PER | 21 | 19 | -2 |
+| BOT | 22 | 20 | -2 |
+
+- **Spearman Rank (Austria GP 2026): 0.93**
+- **Previous Race (Barcelona GP 2026): 0.75**
+
+**📊 Improvement: ~ 24% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Feature Engineering
+- Hyper Tuning Model
+- Trying Different Modles
+- Training Simpler Model
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- Trying Different Model
+- More Data
+- Building Better EDA, Model Training, Evaluation, Prediction pipelines
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
+## 📊 Example Visualization
+
+The project also includes visualizations comparing:
+
+- Predicted vs Actual race results
+- Feature importance
+- Model performance
+- Correlations between Features
+- Correlation between Race Results
+
+Example plots include:
+
+- Feature importance graphs
+- Predicted vs Actual finishing order
+- Correlation Heatmap
+- Result Correlation Heatmap
+- Result Features
+
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/08.AusriaGP/Plots
+
+---
 
 ---
 
