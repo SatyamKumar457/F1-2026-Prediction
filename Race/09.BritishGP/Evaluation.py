@@ -94,6 +94,7 @@ plt.savefig('Race/09.BritishGP/Plots/Result_Feature_RaceResult_Correlation.png',
 Final["Position_Diff"] = Final["Predicted_Pos"] - Final["Position"]
 
 Final_sorted = Final.sort_values("Position_Diff")
+print(Final)
 
 plt.figure(figsize=(8,10))
 
