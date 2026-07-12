@@ -225,10 +225,10 @@ This measures how well the predicted order matches the actual finishing order.
 | PER | 21 | 19 | -2 |
 | BOT | 22 | 20 | -2 |
 
-- **Spearman Rank (Austrian GP 2026): 0.93**
+- **Spearman Rank (Austria GP 2026): 0.93**
 - **Previous Race (Barcelona GP 2026): 0.75**
 
-**📊 Improvement: ~ 85.71% increase in ranking correlation**
+**📊 Improvement: ~ 24% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
@@ -238,6 +238,7 @@ Key improvements in this iteration:
 - Feature Engineering
 - Hyper Tuning Model
 - Trying Different Modles
+- Training Simpler Model
 
 These directly contributed to the performance jump.
 
@@ -248,6 +249,7 @@ Future model improvements will include:
 
 - Trying Different Model
 - More Data
+- Building Better EDA, Model Training, Evaluation, Prediction pipelines
 
 The goal is simple:
 Improve the model after every race using new data and better features.
@@ -270,7 +272,7 @@ Example plots include:
 - Result Correlation Heatmap
 - Result Features
 
-See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/07.BarcelonaGP/Plots
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/08.AusriaGP/Plots
 
 ---
 
