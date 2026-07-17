@@ -10,6 +10,7 @@ import random
 import joblib
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.pipeline import Pipeline
 
 File_Path = "Race/10.BelgianGP/"
 
@@ -31,16 +32,21 @@ y = TRA['Race_Result']
 
 X_train, X_test, y_train, y_test = train_test_split(X , y, test_size = 0.30, random_state = 23)
 
-model = Ridge()
+
+
+model = Pipeline([
+    ("scaler", StandardScaler()),
+    ("ridge", Ridge())
+])
 
 
 param_grid = {
-    "alpha": [ 0.01, 0.1, 1, 10, 25, 50, 100, 250, 500, 1000, 5000, 10000],
-    "fit_intercept": [True, False],
-    "solver": ["auto", "svd", "cholesky", "lsqr"],
-    "max_iter":[100,200,500,1000,10000,100000],
-    "positive": [True,False],
-    "random_state":[42]
+    "ridge__alpha": [0.01, 0.1, 1, 10, 25, 50, 100, 250, 500, 1000, 5000, 10000],
+    "ridge__fit_intercept": [True, False],
+    "ridge__solver": ["auto", "svd", "cholesky", "lsqr"],
+    "ridge__max_iter": [100, 200, 500, 1000],
+    "ridge__positive": [True, False],
+    "ridge__random_state": [42]
 }
 
 def spearman_rank(y_true, y_pred):
@@ -71,7 +77,7 @@ print("Spearman Rank:", corr)
 joblib.dump(regcv, f"{File_Path}Model/Ridge{corr:.2f}.pkl")
 
 
-best_model = regcv.best_estimator_
+best_model = regcv.best_estimator_.named_steps["ridge"]
 
 feature_importance = pd.Series(
     best_model.coef_,
