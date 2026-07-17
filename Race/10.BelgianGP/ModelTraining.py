@@ -31,16 +31,16 @@ y = TRA['Race_Result']
 
 X_train, X_test, y_train, y_test = train_test_split(X , y, test_size = 0.30, random_state = 23)
 
-model = RandomForestRegressor()
+model = Ridge()
 
 
 param_grid = {
-    "n_estimators": [200, 500],
-    "max_depth": [5, 10, None],
-    "min_samples_split": [2, 5],
-    "min_samples_leaf": [1, 2],
-    "max_features": ["sqrt", None],
-    "bootstrap": [True]
+    "alpha": [ 0.01, 0.1, 1, 10, 25, 50, 100, 250, 500, 1000, 5000, 10000],
+    "fit_intercept": [True, False],
+    "solver": ["auto", "svd", "cholesky", "lsqr"],
+    "max_iter":[100,200,500,1000,10000,100000],
+    "positive": [True,False],
+    "random_state":[42]
 }
 
 def spearman_rank(y_true, y_pred):
@@ -68,7 +68,7 @@ corr, _ = spearmanr(y_pred, y_test)
 print("Spearman Rank:", corr)
 
 
-joblib.dump(regcv, f"{File_Path}Model/RandomForest{corr:.2f}.pkl")
+joblib.dump(regcv, f"{File_Path}Model/Ridge{corr:.2f}.pkl")
 
 
 best_model = regcv.best_estimator_
