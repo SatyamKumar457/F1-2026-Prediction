@@ -16,9 +16,11 @@ File_Path = "Race/10.BelgianGP/"
 TRA = pd.read_csv(f"{File_Path}Data/TrainingData.csv")
 
 columns = [
+       'AveragePositionFromLast3Races',
        'AveragePointsFromLast3Races', 'ConstructorAveragePointFromLast3Races',
-       'FP1_BestTime(s)', 'FP2_BestTime(s)', 'FP3_BestTime(s)','Qualifying_Time(s)', 
-       'Starting_Pos', 'DriverPoints', 'ConstructorPoints', 'FP1_Rank',
+       'FP1_BestTime(s)', 'FP2_BestTime(s)', 'FP3_BestTime(s)',
+       'Qualifying_Time(s)', 'Starting_Pos',
+       'DriverPoints', 'ConstructorPoints', 'FP1_Rank',
        'FP2_Rank', 'FP3_Rank', 'FP1_DeltaToFastest', 'FP2_DeltaToFastest',
        'FP3_DeltaToFastest','StartXConst', 'DriXConst', 'FP3XStart'
        ]
@@ -58,6 +60,7 @@ regcv.fit(X_train, y_train)
 
 y_pred = regcv.predict(X_test)
 
+print(regcv.best_params_)
 
 corr, _ = spearmanr(y_pred, y_test)
 print("Spearman Rank:", corr)
