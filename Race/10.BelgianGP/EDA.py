@@ -2,17 +2,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-File_Path = "Race/10.BelgianGP/Data/"
+File_Path = "Race/10.BelgianGP/"
 
-AUS = pd.read_csv(f'{File_Path}AustraliaGP.csv')
-CHI = pd.read_csv(f'{File_Path}ChinaGP.csv')
-JAP = pd.read_csv(f'{File_Path}JapanGP.csv')
-MIA  = pd.read_csv(f'{File_Path}MiamiGP.csv')
-CAN = pd.read_csv(f'{File_Path}CanadaGP.csv')
-MON = pd.read_csv(f'{File_Path}MonacoGP.csv')
-BAR = pd.read_csv(f'{File_Path}BarcelonaGP.csv')
-AUA = pd.read_csv(f'{File_Path}AustriaGP.csv')
-BRI = pd.read_csv(f"{File_Path}BritishGP.csv")
+AUS = pd.read_csv(f'{File_Path}Data/AustraliaGP.csv')
+CHI = pd.read_csv(f'{File_Path}Data/ChinaGP.csv')
+JAP = pd.read_csv(f'{File_Path}Data/JapanGP.csv')
+MIA  = pd.read_csv(f'{File_Path}Data/MiamiGP.csv')
+CAN = pd.read_csv(f'{File_Path}Data/CanadaGP.csv')
+MON = pd.read_csv(f'{File_Path}Data/MonacoGP.csv')
+BAR = pd.read_csv(f'{File_Path}Data/BarcelonaGP.csv')
+AUA = pd.read_csv(f'{File_Path}Data/AustriaGP.csv')
+BRI = pd.read_csv(f"{File_Path}Data/BritishGP.csv")
 
 TRA = pd.concat([AUS,CHI,JAP,MIA,CAN,MON,BAR,AUA,BRI],axis=0)
 
@@ -31,14 +31,14 @@ plt.figure(figsize=(10,8))
 sns.heatmap(TRA.iloc[:,2:].corr(method='spearman'), cmap='turbo')
 
 plt.title('Correlation Between Features (Spearman)', fontsize=22, fontweight='bold',pad=20)
-plt.savefig('Race/09.BritishGP/Plots/Correlation_Heatmap.png', dpi=300, bbox_inches='tight')
+plt.savefig(f'{File_Path}/Plots/Correlation_Heatmap.png', dpi=300, bbox_inches='tight')
 
 
 corr = TRA.iloc[:,2:].corr(method='spearman')[['Race_Result']]
 plt.figure(figsize=(10,8))
 plt.title('Correlation of Features with Race Result (Spearman)', fontsize=22, fontweight='bold',pad=20)
 sns.heatmap(corr, annot=True, cmap='turbo')
-plt.savefig('Race/09.BritishGP/Plots/Feature_RaceResult_Correlation.png', dpi=300, bbox_inches='tight')
+plt.savefig(f'{File_Path}/Plots/Feature_RaceResult_Correlation.png', dpi=300, bbox_inches='tight')
 
 
 
@@ -516,14 +516,14 @@ plt.figure(figsize=(10,8))
 sns.heatmap(TRA.iloc[:,2:].corr(method='spearman'), cmap='turbo')
 
 plt.title('Correlation Between Features After Feature Engineering (Spearman)', fontsize=22, fontweight='bold',pad=20)
-plt.savefig('Race/09.BritishGP/Plots/Correlation_Heatmap_After_Feature_Engineering.png', dpi=300, bbox_inches='tight')
+plt.savefig(f'{File_Path}/Plots/Correlation_Heatmap_After_Feature_Engineering.png', dpi=300, bbox_inches='tight')
 
 corr = TRA.iloc[:,2:].corr(method='spearman')[['Race_Result']]
 plt.figure(figsize=(10,8))
 plt.title('Correlation of Features with Race Result After Feature Engineering (Spearman)', fontsize=22, fontweight='bold',pad=20)
 sns.heatmap(corr, annot=True, cmap='turbo')
-plt.savefig('Race/09.BritishGP/Plots/Feature_RaceResult_Correlation_After_Feature_Engineering.png', dpi=300, bbox_inches='tight')
+plt.savefig(f'{File_Path}/Plots/Feature_RaceResult_Correlation_After_Feature_Engineering.png', dpi=300, bbox_inches='tight')
 
 
-TRA.to_csv(f"{File_Path}TrainingData.csv",index=False)
+TRA.to_csv(f"{File_Path}Data/TrainingData.csv",index=False)
 
