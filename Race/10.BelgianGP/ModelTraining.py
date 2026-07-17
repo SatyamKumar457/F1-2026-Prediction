@@ -35,25 +35,20 @@ model = RandomForestRegressor()
 
 
 param_grid = {
-    'n_estimators':[100,200,300,500,1000],
-    'criterion':["absolute_error"],
-    'max_depth':[3,4,5,7,10,13,15,19],
-    'min_samples_split':[2,3,4,5,7,10],
-    'min_weight_fraction_leaf':[0,0.5,0.2],
-    'max_features':[5,7,10,15,19],
-    'max_leaf_nodes':[5,7,10,15,19],
-    'bootstrap':[True,False],
-    'n_jobs':[-1,0,1,2,3,4],
-    'random_state':[42],
-    'warm_start':[True],
-
-
+    "n_estimators": [200, 500],
+    "max_depth": [5, 10, None],
+    "min_samples_split": [2, 5],
+    "min_samples_leaf": [1, 2],
+    "max_features": ["sqrt", None],
+    "bootstrap": [True]
 }
 
-def spearman_correlation(y_true,y_pred):
-    return spearmanr(y_true,y_pred)[0]
+def spearman_rank(y_true, y_pred):
+    if len(np.unique(y_true)) < 2 or len(np.unique(y_pred)) < 2:
+        return 0.0
+    return spearmanr(y_true, y_pred).statistic
 
-spearman_scorer = make_scorer(spearman_correlation, greater_is_better=True)
+spearman_scorer = make_scorer(spearman_rank, greater_is_better=True)
 
 
 regcv = GridSearchCV(
