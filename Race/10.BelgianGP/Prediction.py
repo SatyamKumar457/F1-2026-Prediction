@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import joblib
 from scipy.stats import spearmanr
 from sklearn.metrics import make_scorer
@@ -7,8 +8,10 @@ File_Path = "Race/10.BelgianGP/"
 
 PRE = pd.read_csv(f"{File_Path}Data/PredictionData.csv")
 
-def spearman_correlation(y_true,y_pred):
-    return spearmanr(y_true,y_pred)[0]
+def spearman_rank(y_true, y_pred):
+    if len(np.unique(y_true)) < 2 or len(np.unique(y_pred)) < 2:
+        return 0.0
+    return spearmanr(y_true, y_pred).statistic
 
 spearman_scorer = make_scorer(spearman_correlation, greater_is_better=True)
 
