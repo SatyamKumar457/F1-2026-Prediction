@@ -13,7 +13,7 @@ def spearman_rank(y_true, y_pred):
         return 0.0
     return spearmanr(y_true, y_pred).statistic
 
-spearman_scorer = make_scorer(spearman_correlation, greater_is_better=True)
+spearman_scorer = make_scorer(spearman_rank, greater_is_better=True)
 
 model = joblib.load(f"{File_Path}Model/Ridge0.75.pkl")
 
