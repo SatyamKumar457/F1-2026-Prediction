@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-File_Path = "Race/10.BelgianGP/"
+File_Path = "Race/11.HungarianGP/"
 
 AUS = pd.read_csv(f'{File_Path}Data/AustraliaGP.csv')
 CHI = pd.read_csv(f'{File_Path}Data/ChinaGP.csv')
@@ -13,9 +13,9 @@ MON = pd.read_csv(f'{File_Path}Data/MonacoGP.csv')
 BAR = pd.read_csv(f'{File_Path}Data/BarcelonaGP.csv')
 AUA = pd.read_csv(f'{File_Path}Data/AustriaGP.csv')
 BRI = pd.read_csv(f"{File_Path}Data/BritishGP.csv")
-HUN = pd.read_csv(f"{File_Path}Data/HungarianGP.csv")
+BEL = pd.read_csv(f"{File_Path}Data/BelgianGP.csv")
 
-TRA = pd.concat([AUS,CHI,JAP,MIA,CAN,MON,BAR,AUA,BRI,HUN],axis=0)
+TRA = pd.concat([AUS,CHI,JAP,MIA,CAN,MON,BAR,AUA,BRI,BEL],axis=0)
 
 TRA.dropna(subset=['Qualifying_Time(s)','Race_Result'],inplace=True)
 TRA['FP1_BestTime(s)'].fillna(TRA['FP1_BestTime(s)'].median(),inplace=True)
@@ -509,52 +509,52 @@ BRI['FP3XStart'] = BRI['FP3_Rank']*BRI['Starting_Pos']
 BRI = BRI.sort_values('Driver', ascending=True).reset_index(drop=True)
 
 
-HUN.dropna(subset=['Qualifying_Time(s)','Race_Result'],inplace=True)
-HUN['FP1_BestTime(s)'].fillna(HUN['FP1_BestTime(s)'].median(),inplace=True)
-HUN['FP2_BestTime(s)'].fillna(HUN['FP2_BestTime(s)'].median(),inplace=True)
-HUN['FP3_BestTime(s)'].fillna(HUN['FP3_BestTime(s)'].median(),inplace=True)
-HUN['Sector1Time(s)'].fillna(HUN['Sector1Time(s)'].median(),inplace=True)
-HUN['Sector2Time(s)'].fillna(HUN['Sector2Time(s)'].median(),inplace=True)
-HUN['Sector3Time(s)'].fillna(HUN['Sector3Time(s)'].median(),inplace=True)
-HUN['Average_Laptime(s)'].fillna(HUN['Average_Laptime(s)'].mean(),inplace=True)
-HUN['AveragePointsFromLast3Races'].fillna(0,inplace=True)
+BEL.dropna(subset=['Qualifying_Time(s)','Race_Result'],inplace=True)
+BEL['FP1_BestTime(s)'].fillna(BEL['FP1_BestTime(s)'].median(),inplace=True)
+BEL['FP2_BestTime(s)'].fillna(BEL['FP2_BestTime(s)'].median(),inplace=True)
+BEL['FP3_BestTime(s)'].fillna(BEL['FP3_BestTime(s)'].median(),inplace=True)
+BEL['Sector1Time(s)'].fillna(BEL['Sector1Time(s)'].median(),inplace=True)
+BEL['Sector2Time(s)'].fillna(BEL['Sector2Time(s)'].median(),inplace=True)
+BEL['Sector3Time(s)'].fillna(BEL['Sector3Time(s)'].median(),inplace=True)
+BEL['Average_Laptime(s)'].fillna(BEL['Average_Laptime(s)'].mean(),inplace=True)
+BEL['AveragePointsFromLast3Races'].fillna(0,inplace=True)
 
 print("Data Cleaning Done")
 
-HUN=HUN.sort_values('FP1_BestTime(s)', ascending=True).reset_index(drop=True)
-HUN['FP1_Rank'] = HUN.index+1
-HUN=HUN.sort_values('FP2_BestTime(s)', ascending=True).reset_index(drop=True)
-HUN['FP2_Rank'] = HUN.index+1
-HUN=HUN.sort_values('FP3_BestTime(s)', ascending=True).reset_index(drop=True)
-HUN['FP3_Rank'] = HUN.index+1
+BEL=BEL.sort_values('FP1_BestTime(s)', ascending=True).reset_index(drop=True)
+BEL['FP1_Rank'] = BEL.index+1
+BEL=BEL.sort_values('FP2_BestTime(s)', ascending=True).reset_index(drop=True)
+BEL['FP2_Rank'] = BEL.index+1
+BEL=BEL.sort_values('FP3_BestTime(s)', ascending=True).reset_index(drop=True)
+BEL['FP3_Rank'] = BEL.index+1
 
-HUN['FP1_DeltaToFastest'] = HUN['FP1_BestTime(s)'] - HUN['FP1_BestTime(s)'].min()
-HUN['FP2_DeltaToFastest'] = HUN['FP2_BestTime(s)'] - HUN['FP2_BestTime(s)'].min()
-HUN['FP3_DeltaToFastest'] = HUN['FP3_BestTime(s)'] - HUN['FP3_BestTime(s)'].min()
+BEL['FP1_DeltaToFastest'] = BEL['FP1_BestTime(s)'] - BEL['FP1_BestTime(s)'].min()
+BEL['FP2_DeltaToFastest'] = BEL['FP2_BestTime(s)'] - BEL['FP2_BestTime(s)'].min()
+BEL['FP3_DeltaToFastest'] = BEL['FP3_BestTime(s)'] - BEL['FP3_BestTime(s)'].min()
 
-HUN=HUN.sort_values('Sector1Time(s)', ascending=True).reset_index(drop=True)
-HUN['Sector1_Rank'] = HUN.index+1
-HUN=HUN.sort_values('Sector2Time(s)', ascending=True).reset_index(drop=True)
-HUN['Sector2_Rank'] = HUN.index+1
-HUN=HUN.sort_values('Sector3Time(s)', ascending=True).reset_index(drop=True)
-HUN['Sector3_Rank'] = HUN.index+1
+BEL=BEL.sort_values('Sector1Time(s)', ascending=True).reset_index(drop=True)
+BEL['Sector1_Rank'] = BEL.index+1
+BEL=BEL.sort_values('Sector2Time(s)', ascending=True).reset_index(drop=True)
+BEL['Sector2_Rank'] = BEL.index+1
+BEL=BEL.sort_values('Sector3Time(s)', ascending=True).reset_index(drop=True)
+BEL['Sector3_Rank'] = BEL.index+1
 
-HUN['CombinedSectorTime'] = HUN['Sector1Time(s)']+HUN['Sector2Time(s)']+HUN['Sector3Time(s)']
-HUN['CombinedSectorDelta'] = HUN['CombinedSectorTime']-HUN['CombinedSectorTime'].min()
+BEL['CombinedSectorTime'] = BEL['Sector1Time(s)']+BEL['Sector2Time(s)']+BEL['Sector3Time(s)']
+BEL['CombinedSectorDelta'] = BEL['CombinedSectorTime']-BEL['CombinedSectorTime'].min()
 
-HUN=HUN.sort_values('Average_Laptime(s)', ascending=True).reset_index(drop=True)
-HUN['LapTime_Rank'] = HUN.index+1
+BEL=BEL.sort_values('Average_Laptime(s)', ascending=True).reset_index(drop=True)
+BEL['LapTime_Rank'] = BEL.index+1
 
-HUN['DeltaToFastestLap'] = HUN['Average_Laptime(s)'] - HUN['Average_Laptime(s)'].min()
+BEL['DeltaToFastestLap'] = BEL['Average_Laptime(s)'] - BEL['Average_Laptime(s)'].min()
 
-HUN['StartXConst'] = HUN['Starting_Pos']*HUN['ConstructorPoints']
-HUN['DriXConst'] = HUN['DriverPoints']*HUN['ConstructorPoints']
-HUN['FP3XStart'] = HUN['FP3_Rank']*HUN['Starting_Pos']
+BEL['StartXConst'] = BEL['Starting_Pos']*BEL['ConstructorPoints']
+BEL['DriXConst'] = BEL['DriverPoints']*BEL['ConstructorPoints']
+BEL['FP3XStart'] = BEL['FP3_Rank']*BEL['Starting_Pos']
 
 
-HUN = HUN.sort_values('Driver', ascending=True).reset_index(drop=True)
+BEL = BEL.sort_values('Driver', ascending=True).reset_index(drop=True)
 
-TRA = pd.concat([AUS,CHI,JAP,MIA,CAN,MON,BAR,AUA,BRI,HUN],axis=0)
+TRA = pd.concat([AUS,CHI,JAP,MIA,CAN,MON,BAR,AUA,BRI,BEL],axis=0)
 
 
 plt.figure(figsize=(10,8))
