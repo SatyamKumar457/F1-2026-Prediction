@@ -40,10 +40,10 @@ model = Pipeline([
 
 
 param_grid = {
-    "ridge__alpha": [0.01, 0.1, 1, 10, 25, 50, 100, 250, 500, 1000, 5000, 10000],
+    "ridge__alpha": [0.01, 0.1, 1, 10, 25, 50, 100, 250, 500, 1000,2500,3000, 5000,7500, 10000],
     "ridge__fit_intercept": [True, False],
     "ridge__solver": ["auto", "svd", "cholesky", "lsqr"],
-    "ridge__max_iter": [100, 200, 500, 1000],
+    "ridge__max_iter": [50,75,100,150, 200, 500, 1000],
     "ridge__positive": [True, False],
     "ridge__random_state": [42]
 }
