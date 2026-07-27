@@ -229,7 +229,7 @@ This measures how well the predicted order matches the actual finishing order.
 - **Spearman Rank (Hungarian GP 2026): 0.82**
 - **Previous Race (Belgian GP 2026): 0.81**
 
-**📊 Improvement: ~ 32.79% increase in ranking correlation**
+**📊 Improvement: ~ 1.23% increase in ranking correlation**
 
 ---
 ## 🔧 Improvements
@@ -273,7 +273,7 @@ Example plots include:
 - Result Correlation Heatmap
 - Result Features
 
-See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/10.BelgianGP/Plots
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/11.HungarianGP/Plots
 
 ---
 
