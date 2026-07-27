@@ -143,6 +143,142 @@ The project uses:
 
 ---
 
+
+---
+
+## 11. Hungarian Grand Prix 2026 🇭🇺
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/010.BelgianGP)
+---
+
+## 🧠 Features Used
+
+The model currently uses the following features:
+
+- Average Position From Last 3 Races
+- Average Points From Last 3 Races
+- Constructor Average Point From Last 3 Races
+- FP 1/2/3 Best Time
+- Sector 1/2/3 Time
+- Average Lap Time
+- Qualifying Time
+- Starting Position
+- Driver's Point
+- Constructor's Point
+- FP 1/2/3 Rank
+- FP 1/2/3 Delta to Fastest
+- Sector 1/2/3 Rank
+- Combined Sector Time
+- Combined Sector Delta
+- Lap Time Rank
+- Delta to Fastest Lap
+- Start X Constructor Position
+- Driver X Constructor Point
+- FP3 X Starting Position
+
+These features aim to capture both driver pace and team performance under race conditions.
+---
+
+## 🤖 Model
+
+The current model uses:
+
+**Ridge Regressor**
+
+The model predicts:
+
+➡️ Final Standing (continuous value)
+
+Drivers are then ranked based on predicted values to estimate the final race order.
+
+---
+
+## 📈 Evaluation
+
+Model performance is evaluated using:
+
+- **Spearman Rank Correlation**
+
+This measures how well the predicted order matches the actual finishing order.
+---
+
+| Driver | Actual Position | Predicted Position | Position Difference |
+|------|------|------|------|
+| ANT | 1 | 1 | 0 |
+| LEC | 2 | 5 | 3 |
+| VER | 3 | 2 | -1 |
+| HAM | 4 | 4 | 0 |
+| PIA | 5 | 7 | 2 |
+| HAD | 6 | 8 | 2 |
+| NOR | 7 | 3 | -4 |
+| BOR | 8 | 10 | 2 |
+| LIN | 9 | 9 | 0 |
+| COL | 10 | 13 | 3 |
+| GAS | 11 | 14 | 3 |
+| LAW | 12 | 11 | -1 |
+| HUL | 13 | 12 | -1 |
+| BEA | 14 | 15 | 1 |
+| ALB | 15 | 16 | 1 |
+| SAI | 16 | 17 | 1 |
+| OCO | 17 | 18 | 1 |
+| BOT | 18 | 19 | 1 |
+| ALO | 19 | 21 | 2 |
+| STR | 20 | 22 | 2 |
+| PER | 21 | 20 | -1 |
+| RUS | 22 | 6 | -16 |
+
+- **Spearman Rank (Belgian GP 2026): 0.81**
+- **Previous Race (British GP 2026): 0.61**
+
+**📊 Improvement: ~ 32.79% increase in ranking correlation**
+
+---
+## 🔧 Improvements
+
+Key improvements in this iteration:
+
+- Feature Engineering
+- Hyper Tuning Model
+- Trying Different Modles
+- Training Simpler Model
+
+These directly contributed to the performance jump.
+
+---
+## 🚀 Next Steps
+
+Future model improvements will include:
+
+- Trying Different Model
+- More Data
+- Building Better EDA, Model Training, Evaluation, Prediction pipelines
+
+The goal is simple:
+Improve the model after every race using new data and better features.
+---
+## 📊 Example Visualization
+
+The project also includes visualizations comparing:
+
+- Predicted vs Actual race results
+- Feature importance
+- Model performance
+- Correlations between Features
+- Correlation between Race Results
+
+Example plots include:
+
+- Feature importance graphs
+- Predicted vs Actual finishing order
+- Correlation Heatmap
+- Result Correlation Heatmap
+- Result Features
+
+See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/10.BelgianGP/Plots
+
+---
+
+
+
 ---
 
 ## 10. Belgian Grand Prix 2026 🇧🇪
