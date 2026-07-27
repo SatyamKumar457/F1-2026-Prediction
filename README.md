@@ -147,7 +147,7 @@ The project uses:
 ---
 
 ## 11. Hungarian Grand Prix 2026 🇭🇺
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/010.BelgianGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/11.HungarianGP)
 ---
 
 ## 🧠 Features Used
@@ -203,31 +203,31 @@ This measures how well the predicted order matches the actual finishing order.
 
 | Driver | Actual Position | Predicted Position | Position Difference |
 |------|------|------|------|
-| ANT | 1 | 1 | 0 |
-| LEC | 2 | 5 | 3 |
-| VER | 3 | 2 | -1 |
-| HAM | 4 | 4 | 0 |
-| PIA | 5 | 7 | 2 |
-| HAD | 6 | 8 | 2 |
-| NOR | 7 | 3 | -4 |
-| BOR | 8 | 10 | 2 |
-| LIN | 9 | 9 | 0 |
-| COL | 10 | 13 | 3 |
-| GAS | 11 | 14 | 3 |
-| LAW | 12 | 11 | -1 |
-| HUL | 13 | 12 | -1 |
-| BEA | 14 | 15 | 1 |
-| ALB | 15 | 16 | 1 |
-| SAI | 16 | 17 | 1 |
-| OCO | 17 | 18 | 1 |
-| BOT | 18 | 19 | 1 |
-| ALO | 19 | 21 | 2 |
-| STR | 20 | 22 | 2 |
-| PER | 21 | 20 | -1 |
-| RUS | 22 | 6 | -16 |
+| NOR | 1 | 3 | 2 |
+| VER | 2 | 4 | 2 |
+| ANT | 3 | 8 | 5 |
+| LEC | 4 | 2 | -2 |
+| HAM | 5 | 1 | -4 |
+| HAD | 6 | 6 | 0 |
+| RUS | 7 | 5 | -2 |
+| LAW | 8 | 9 | 1 |
+| HUL | 9 | 10 | 1 |
+| LIN | 10 | 11 | 1 |
+| BOR | 11 | 12 | 1 |
+| GAS | 12 | 13 | 1 |
+| STR | 13 | 20 | 7 |
+| ALO | 14 | 17 | 3 |
+| COL | 15 | 15 | 0 |
+| OCO | 16 | 14 | -2 |
+| ALB | 17 | 19 | 2 |
+| SAI | 18 | 21 | 3 |
+| BEA | 19 | 16 | -3 |
+| PIA | 20 | 7 | -13 |
+| PER | 21 | 18 | -3 |
+| BOT | 22 | 22 | 0 |
 
-- **Spearman Rank (Belgian GP 2026): 0.81**
-- **Previous Race (British GP 2026): 0.61**
+- **Spearman Rank (Hungarian GP 2026): 0.82**
+- **Previous Race (Belgian GP 2026): 0.81**
 
 **📊 Improvement: ~ 32.79% increase in ranking correlation**
 
@@ -282,7 +282,7 @@ See the Plots :- https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/
 ---
 
 ## 10. Belgian Grand Prix 2026 🇧🇪
-(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/010.BelgianGP)
+(https://github.com/SatyamKumar457/F1-2026-Prediction/tree/main/Race/10.BelgianGP)
 ---
 
 ## 🧠 Features Used
