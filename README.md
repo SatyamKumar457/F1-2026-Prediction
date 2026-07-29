@@ -2,7 +2,7 @@
 
 Machine Learning project that predicts Formula 1 race outcomes using historical race data, telemetry metrics, and team performance indicators.
 
-This project uses data from previous seasons (primarily 2024–2025) to train a model that predicts race performance for the **2026 Formula 1 season**.
+This project uses data from current season (primarily 2025-2026) to train a model that predicts race performance for the **2026 Formula 1 season**.
 
 The goal is to explore how data science and machine learning can be applied to motorsport analytics.
 
