@@ -62,67 +62,37 @@ F1-2026-Prediction
 ├── Race
 │ ├── 01.AustraliaGP
 |   ├── Data
-│     ├── f1_dataset_progress_2019.csv
-│     ├── f1_dataset_progress_2024.csv
-│     ├── f1_dataset_progress_2025.csv
-│     ├── f1_dataset_progress_2026copy.csv
-|     ├── f1_dataset_progress_2026.csv 
 │   ├── AustraliaGP.ipynb
 │   ├── Evaluation.ipynb
 │   
 │ ├── 02.ChinaGP
 │   ├── Data
-│     ├── f1_dataset_progress_2019.csv
-│     ├── f1_dataset_progress_2024.csv
-│     ├── f1_dataset_progress_2025.csv
-│     ├── f1_dataset_progress_2026.csv
-│     ├── f1_dataset_progress_2026(2).csv
 │   ├── ChinaGP.ipynb
 |
 │ ├── 03.JapanGP
 │   ├── Data
-│     ├── AustraliaGP.csv
-│     ├── AustraliaGPModified.csv
-│     ├── Japan_result.csv
-│     ├── JapanGP.csv
-│     ├── JapanGPModified.csv
 │   ├── EDA&Feature.ipynb
 │   ├── ETL.ipynb
 │   ├── ModelTraining.ipynb
 |
 │ ├── 04.MiamiGP
 │   ├── Data
-│     ├── AustraliaGP.csv
-│     ├── ChinaGP.csv
-│     ├── JapanGP.csv
-│     ├── MiamiGP.csv
-│     ├── Predicted_Results.csv
-│     ├── Prediction_Data.csv
-│     ├── Training_Data.csv
 |   ├── Model
-|     ├── RandomForestModel1.pkl
 |   ├── Plots
-|     ├── Correlation_Heatmap.png
-|     ├── Feature_importance.png
-|     ├── Feature_RaceResult_Correlation.png
-|     ├── Result_Correlation_Heatmap.png
-|     ├── Result_Feature_RaceResult_Correlation.png
 │   ├── EDA.ipynb
 │   ├── ETL.ipynb
 |   ├── Evaluation.ipynb
 │   ├── ModelTraining.ipynb
+|   
+| ├── 05.CanadaGP
+|   ├──
+|
+|
 │
 ├── .gitignore
 │ ├── # FastF1 cache
-│     ├── f1_cache/
-│     ├── *.sqlite
-│     ├── *.pkl
 │ ├── # Python
-│     ├── __pycache__/
-│     ├── *.pyc
-│     ├── .venv/
 │ ├── # OS
-│     ├── .DS_Store
 │
 ├── README.md
 │
