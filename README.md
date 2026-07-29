@@ -137,6 +137,34 @@ F1-2026-Prediction
 |   ├── ModelTraining.py
 |   ├── Prediction.py
 |   ├── Result.py
+|   
+| ├── 10.BelgianGP
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.py
+|   ├── EDAforBelgianGP.py
+|   ├── ETL.py
+|   ├── ETLforBelgianGP.py
+|   ├── Evaluation.py
+|   ├── File.py
+|   ├── ModelTraining.py
+|   ├── Prediction.py
+|   ├── Result.py
+|   
+| ├── 11.HungarianGP
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.py
+|   ├── EDAforHungarianGP.py
+|   ├── ETL.py
+|   ├── ETLforHungarianGP.py
+|   ├── Evaluation.py
+|   ├── File.py
+|   ├── ModelTraining.py
+|   ├── Prediction.py
+|   ├── Result.py
 |
 │
 ├── .gitignore
