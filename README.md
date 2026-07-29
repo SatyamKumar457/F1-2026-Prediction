@@ -85,8 +85,58 @@ F1-2026-Prediction
 │   ├── ModelTraining.ipynb
 |   
 | ├── 05.CanadaGP
-|   ├──
-|
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.ipynb
+|   ├── ETL.py
+|   ├── ETLforCanadaGP.py
+|   ├── Evaluation.ipynb
+|   ├── ModelTraining.ipynb
+|   ├── Prediction.ipynb
+|   
+| ├── 06.MonacoGP
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.ipynb
+|   ├── ETL.py
+|   ├── ETLforMonacoGP.py
+|   ├── Evaluation.ipynb
+|   ├── ModelTraining.ipynb
+|   
+| ├── 07.BarcelonaGP
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.ipynb
+|   ├── ETL.py
+|   ├── ETLforBarcelonaGP.py
+|   ├── Evaluation.ipynb
+|   ├── ModelTraining.ipynb
+|   
+| ├── 08.AustriaGP
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.ipynb
+|   ├── ETL.py
+|   ├── ETLforAustriaGP.py
+|   ├── Evaluation.ipynb
+|   ├── ModelTraining.ipynb
+|   
+| ├── 09.BritishGP
+|   ├── Data
+|   ├── Model
+|   ├── Plots
+|   ├── EDA.py
+|   ├── EDAforBritishGP.py
+|   ├── ETL.py
+|   ├── ETLforBritishGP.py
+|   ├── Evaluation.py
+|   ├── ModelTraining.py
+|   ├── Prediction.py
+|   ├── Result.py
 |
 │
 ├── .gitignore
