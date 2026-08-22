@@ -368,7 +368,7 @@ for race in races:
     print("Resetting Index Done.")
 
 
-    df.to_csv(f"Race/09.BritishGP/Data/{race}GP.csv",index=False)
+    df.to_csv(f"Race/12.NetherlandsGP/Data/{race}GP.csv",index=False)
 
 
 print("Done with ETL")
