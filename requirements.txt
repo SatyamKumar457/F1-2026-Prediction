@@ -4,9 +4,5 @@ numpy
 scikit-learn
 xgboost
 matplotlib
-os
 requests
 scipy
-pickle
-pathlib
-logging
