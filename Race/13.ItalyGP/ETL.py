@@ -256,174 +256,172 @@ File_Path = "Race/13.ItalyGP/Data"
 
 # For Normal Races
 
-# races = ["Australia", "Japan", "Monaco","Barcelona","Austria","Belgian","Hungarian"]
-# season = 2026
+races = ["Australia", "Japan", "Monaco","Barcelona","Austria","Belgian","Hungarian"]
+season = 2026
 
-# for race in races:
-#     FP1 = fastf1.get_session(season, race, 'FP1')
-#     FP1.load()
-#     FP2 = fastf1.get_session(season, race, 'FP2')
-#     FP2.load()
-#     FP3 = fastf1.get_session(season, race, 'FP3')
-#     FP3.load()
+for race in races:
+    FP1 = fastf1.get_session(season, race, 'FP1')
+    FP1.load()
+    FP2 = fastf1.get_session(season, race, 'FP2')
+    FP2.load()
+    FP3 = fastf1.get_session(season, race, 'FP3')
+    FP3.load()
 
-#     Qualify = fastf1.get_session(season, race, 'Q')
-#     Qualify.load()
+    Qualify = fastf1.get_session(season, race, 'Q')
+    Qualify.load()
 
-#     Result = fastf1.get_session(season, race, 'R')
-#     Result.load()
+    Result = fastf1.get_session(season, race, 'R')
+    Result.load()
 
  
 
-#     print(f"Done Loading Season {season} & Race {race}")
+    print(f"Done Loading Season {season} & Race {race}")
 
-#     fp1_best = get_fp1_best(FP1)
-#     fp2_best = get_fp2_best(FP2)
-#     fp3_best = get_fp3_best(FP3)
-#     sector_time_best = get_sector_times(FP2)
-#     average_laptime = get_average_laptime(FP2)
-#     qualifying_time = get_qualifying_data(Qualify)
-#     starting_position = get_starting_position(Qualify)
-#     result = get_race_results(Result)
-#     df_points = get_driver_points_before_race(season, race)
-#     df_constructor_points = get_constructor_points_before_race(season, race)
-
-
-#     df_points['Constructor'] = df_points['Driver'].map(Map)
-#     df_constructor_points['NewConstructor'] = df_constructor_points['Constructor'].map(Constructor_Map)
-#     df_constructor_points.drop(columns=['Constructor'],axis=1,inplace=True)
-#     df_constructor_points.rename({'NewConstructor':'Constructor'},axis=1,inplace=True)
-#     df_points = df_points.merge(
-#         df_constructor_points[["Constructor","Points"]],
-#         on = "Constructor",
-#         how = "left"
-#     )
-#     df_points.rename({"Points_x":"DriversPoint","Points_y":"ConstructorsPoint"},axis=1,inplace=True)
+    fp1_best = get_fp1_best(FP1)
+    fp2_best = get_fp2_best(FP2)
+    fp3_best = get_fp3_best(FP3)
+    sector_time_best = get_sector_times(FP2)
+    average_laptime = get_average_laptime(FP2)
+    qualifying_time = get_qualifying_data(Qualify)
+    starting_position = get_starting_position(Qualify)
+    result = get_race_results(Result)
+    df_points = get_driver_points_before_race(season, race)
+    df_constructor_points = get_constructor_points_before_race(season, race)
 
 
+    df_points['Constructor'] = df_points['Driver'].map(Map)
+    df_constructor_points['NewConstructor'] = df_constructor_points['Constructor'].map(Constructor_Map)
+    df_constructor_points.drop(columns=['Constructor'],axis=1,inplace=True)
+    df_constructor_points.rename({'NewConstructor':'Constructor'},axis=1,inplace=True)
+    df_points = df_points.merge(
+        df_constructor_points[["Constructor","Points"]],
+        on = "Constructor",
+        how = "left"
+    )
+    df_points.rename({"Points_x":"DriversPoint","Points_y":"ConstructorsPoint"},axis=1,inplace=True)
 
-#     sessions_to_analyze = []
 
-#     if race == "Australia":
-#         n = 1
 
-#     if race == "Japan":
-#         n = 3
+    sessions_to_analyze = []
 
-#     if race == "Monaco":
-#         n = 6
+    if race == "Australia":
+        n = 1
 
-#     if race == "Barcelona":
-#         n = 7
+    if race == "Japan":
+        n = 3
 
-#     if race == "Austria":
-#         n = 8
+    if race == "Monaco":
+        n = 6
 
-#     if race == "Belgian":
-#         n = 10
+    if race == "Barcelona":
+        n = 7
 
-#     if race == "Hungarian":
-#         n = 11
+    if race == "Austria":
+        n = 8
 
-#     start_round = max(1, n - 2)
+    if race == "Belgian":
+        n = 10
 
-#     for r in range(start_round, n ):
-#         Result = fastf1.get_session(season, r, 'R')
-#         Result.load()
-#         sessions_to_analyze.append(Result)
+    if race == "Hungarian":
+        n = 11
 
-#     driver_form = get_driver_performance_recent(sessions_to_analyze)
-#     constructor_form = get_constructor_performance_recent(sessions_to_analyze)
+    start_round = max(1, n - 2)
 
-#     if constructor_form.empty:
-#         constructor_form = pd.DataFrame({
-#             "Constructor": list(set(Map.values())),
-#             "ConstructorAveragePointFromLast3Races": 0
-#         })
+    for r in range(start_round, n ):
+        Result = fastf1.get_session(season, r, 'R')
+        Result.load()
+        sessions_to_analyze.append(Result)
 
-#     if driver_form.empty:
-#         driver_form = pd.DataFrame({
-#             "Driver": list(Map.keys()),
-#             "AveragePositionFromLast3Races": 22,
-#             "AveragePointsFromLast3Races": 0
-#         })
+    driver_form = get_driver_performance_recent(sessions_to_analyze)
+    constructor_form = get_constructor_performance_recent(sessions_to_analyze)
+
+    if constructor_form.empty:
+        constructor_form = pd.DataFrame({
+            "Constructor": list(set(Map.values())),
+            "ConstructorAveragePointFromLast3Races": 0
+        })
+
+    if driver_form.empty:
+        driver_form = pd.DataFrame({
+            "Driver": list(Map.keys()),
+            "AveragePositionFromLast3Races": 22,
+            "AveragePointsFromLast3Races": 0
+        })
 
    
-#     driver_form.iloc[:, 4:7] = driver_form.iloc[:, 4:7].fillna(0)
-#     driver_form.iloc[:,1:4] = driver_form.iloc[:,1:4].fillna(22)
-#     driver_form['AveragePositionFromLast3Races'] = driver_form.iloc[:, 1:4].mean(axis=1)
-#     driver_form['AveragePointsFromLast3Races'] = driver_form.iloc[:, 4:7].mean(axis=1)
+    driver_form.iloc[:, 4:7] = driver_form.iloc[:, 4:7].fillna(0)
+    driver_form.iloc[:,1:4] = driver_form.iloc[:,1:4].fillna(22)
+    driver_form['AveragePositionFromLast3Races'] = driver_form.iloc[:, 1:4].mean(axis=1)
+    driver_form['AveragePointsFromLast3Races'] = driver_form.iloc[:, 4:7].mean(axis=1)
 
 
-#     constructor_form["ConstructorAveragePointFromLast3Races"] = constructor_form.iloc[:,1:4].mean(axis=1)
+    constructor_form["ConstructorAveragePointFromLast3Races"] = constructor_form.iloc[:,1:4].mean(axis=1)
 
 
-#     driver_form['Constructor'] = driver_form['Driver'].map(Map)
+    driver_form['Constructor'] = driver_form['Driver'].map(Map)
 
-#     driver_form = driver_form.merge(
-#         constructor_form[['Constructor','ConstructorAveragePointFromLast3Races']],
-#         on = 'Constructor',
-#         how = 'left'
-#     )
+    driver_form = driver_form.merge(
+        constructor_form[['Constructor','ConstructorAveragePointFromLast3Races']],
+        on = 'Constructor',
+        how = 'left'
+    )
 
-#     final_driver_form = driver_form[['Driver','Constructor','AveragePositionFromLast3Races','AveragePointsFromLast3Races','ConstructorAveragePointFromLast3Races']]
+    final_driver_form = driver_form[['Driver','Constructor','AveragePositionFromLast3Races','AveragePointsFromLast3Races','ConstructorAveragePointFromLast3Races']]
 
 
     
 
-#     print("Data Extraction Done.")
+    print("Data Extraction Done.")
 
-#     fp1_best.set_index("Driver",inplace=True)
-#     fp2_best.set_index("Driver",inplace=True)
-#     fp3_best.set_index("Driver",inplace=True)
-#     sector_time_best.set_index("Driver",inplace=True)
-#     average_laptime.set_index("Driver",inplace=True)
-#     qualifying_time.set_index("Driver",inplace=True)
-#     starting_position.set_index("Driver",inplace=True)
-#     result.set_index("Driver",inplace=True)
-#     final_driver_form.set_index("Driver",inplace = True)
-#     df_points.set_index("Driver",inplace=True)
+    fp1_best.set_index("Driver",inplace=True)
+    fp2_best.set_index("Driver",inplace=True)
+    fp3_best.set_index("Driver",inplace=True)
+    sector_time_best.set_index("Driver",inplace=True)
+    average_laptime.set_index("Driver",inplace=True)
+    qualifying_time.set_index("Driver",inplace=True)
+    starting_position.set_index("Driver",inplace=True)
+    result.set_index("Driver",inplace=True)
+    final_driver_form.set_index("Driver",inplace = True)
+    df_points.set_index("Driver",inplace=True)
     
 
-#     print("Setting Index Done.")
+    print("Setting Index Done.")
 
-#     df = final_driver_form.copy()
-#     df[["FP1_BestTime(s)"]] = fp1_best[["LapTime"]]
-#     df[["FP2_BestTime(s)"]] = fp2_best[["LapTime"]]
-#     df[["FP3_BestTime(s)"]] = fp3_best[["LapTime"]]
-#     df[["Sector1Time(s)","Sector2Time(s)","Sector3Time(s)"]] = sector_time_best[["Sector1Time","Sector2Time","Sector3Time"]]
-#     df[["Average_Laptime(s)"]] = average_laptime[["LapTime"]]
-#     df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
-#     df[["Starting_Pos"]] = starting_position[["Position"]]
-#     df[["Race_Result"]] = result[["Position"]]
-#     df[["DriverPoints","ConstructorPoints"]] = df_points[["DriversPoint","ConstructorsPoint"]]
+    df = final_driver_form.copy()
+    df[["FP1_BestTime(s)"]] = fp1_best[["LapTime"]]
+    df[["FP2_BestTime(s)"]] = fp2_best[["LapTime"]]
+    df[["FP3_BestTime(s)"]] = fp3_best[["LapTime"]]
+    df[["Sector1Time(s)","Sector2Time(s)","Sector3Time(s)"]] = sector_time_best[["Sector1Time","Sector2Time","Sector3Time"]]
+    df[["Average_Laptime(s)"]] = average_laptime[["LapTime"]]
+    df[["Qualifying_Time(s)"]] = qualifying_time[["Qualifying_Time(s)"]]
+    df[["Starting_Pos"]] = starting_position[["Position"]]
+    df[["Race_Result"]] = result[["Position"]]
+    df[["DriverPoints","ConstructorPoints"]] = df_points[["DriversPoint","ConstructorsPoint"]]
 
-#     print("Data Transformation.")
+    print("Data Transformation.")
 
-#     final_driver_form.reset_index(inplace=True)
-#     fp1_best.reset_index(inplace=True)
-#     fp2_best.reset_index(inplace=True)
-#     fp3_best.reset_index(inplace=True)
-#     sector_time_best.reset_index(inplace=True)
-#     average_laptime.reset_index(inplace=True)
-#     qualifying_time.reset_index(inplace=True)
-#     starting_position.reset_index(inplace=True)
-#     result.reset_index(inplace=True)
-#     df_points.reset_index(inplace=True)
-#     df.reset_index(inplace=True)
+    final_driver_form.reset_index(inplace=True)
+    fp1_best.reset_index(inplace=True)
+    fp2_best.reset_index(inplace=True)
+    fp3_best.reset_index(inplace=True)
+    sector_time_best.reset_index(inplace=True)
+    average_laptime.reset_index(inplace=True)
+    qualifying_time.reset_index(inplace=True)
+    starting_position.reset_index(inplace=True)
+    result.reset_index(inplace=True)
+    df_points.reset_index(inplace=True)
+    df.reset_index(inplace=True)
 
-#     print("Resetting Index Done.")
+    print("Resetting Index Done.")
 
 
-#     df.to_csv(f"{File_Path}/{race}GP.csv",index=False)
+    df.to_csv(f"{File_Path}/{race}GP.csv",index=False)
 
 
 # For Sprint Races
 
-# races = ["China", "Miami", "Canada", "British"]
+races = ["China", "Miami", "Canada", "British"]
 
-races = ["Netherlands"]
-season = 2026
 for race in races:
 
 
