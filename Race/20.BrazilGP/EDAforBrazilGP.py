@@ -5,6 +5,9 @@ File_Path = "Race/20.BrazilGP/"
 BRA = pd.read_csv(f"{File_Path}Data/BrazilGP.csv")
 
 
+print("Total rows loaded:", len(BRA))
+print("Non-null count in Qualifying_Time(s):", BRA['Qualifying_Time(s)'].notnull().sum())
+print("Unique values in Qualifying_Time(s):", BRA['Qualifying_Time(s)'].unique()[:10])
 
 BRA.dropna(subset=['Qualifying_Time(s)'],inplace=True)
 BRA['FP1_BestTime(s)'].fillna(BRA['FP1_BestTime(s)'].median(),inplace=True)
